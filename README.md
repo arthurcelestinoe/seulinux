@@ -4,7 +4,7 @@ Um site interativo e educativo que ajuda pessoas iniciantes ou pouco familiariza
 
 Além do questionário de recomendação, o projeto reúne explicações sobre metodologia, distribuições, termos comuns, segurança e cuidados antes da instalação.
 
-> **Acesse o projeto:** https://arthurcelestinoe.github.io/seulinux/index.html
+> **Acesse o projeto:** https://arthurcelestinoe.github.io/seulinux/
 
 ## Sobre o projeto
 
