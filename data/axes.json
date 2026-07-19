@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "scoring": {
+    "answer_scale": {
+      "min": 0,
+      "max": 5,
+      "neutral": 2.5,
+      "unknown": null
+    },
+    "axis_formula": "score = clamp(50 + 50 * weighted_sum / active_abs_weight_sum, 0, 100)",
+    "weighted_sum": "sum(((answer - 2.5) / 2.5) * question_weight)",
+    "unknown_behavior": "Perguntas marcadas como 'não sei' são ignoradas no numerador e no denominador.",
+    "match_formula": "compatibility = 100 - weighted_mean(abs(user_axis - distro_axis))",
+    "complexity_readiness_formula": "0.50 * technical_autonomy + 0.30 * learning_interest + 0.20 * (100 - low_maintenance)"
+  },
+  "axes": [
+    {
+      "id": "stability",
+      "label": "Estabilidade e previsibilidade",
+      "description": "Preferência por mudanças lentas, versões testadas e comportamento previsível.",
+      "low_label": "Aceita mudanças frequentes",
+      "high_label": "Prioriza previsibilidade",
+      "match_importance": 1.0
+    },
+    {
+      "id": "freshness",
+      "label": "Atualidade",
+      "description": "Importância atribuída a kernel, drivers e aplicativos recentes.",
+      "low_label": "Aceita versões antigas",
+      "high_label": "Quer versões recentes",
+      "match_importance": 1.0
+    },
+    {
+      "id": "low_maintenance",
+      "label": "Baixa manutenção",
+      "description": "Desejo de usar o sistema sem acompanhar intervenções e ajustes frequentes.",
+      "low_label": "Aceita manutenção ativa",
+      "high_label": "Quer pouca manutenção",
+      "match_importance": 1.15
+    },
+    {
+      "id": "technical_autonomy",
+      "label": "Autonomia técnica",
+      "description": "Disposição para pesquisar, usar terminal e resolver problemas.",
+      "low_label": "Precisa de orientação",
+      "high_label": "Resolve problemas com autonomia",
+      "match_importance": 1.0
+    },
+    {
+      "id": "system_control",
+      "label": "Controle do sistema",
+      "description": "Desejo de escolher, substituir e configurar componentes.",
+      "low_label": "Prefere decisões prontas",
+      "high_label": "Quer controle detalhado",
+      "match_importance": 0.85
+    },
+    {
+      "id": "ready_to_use",
+      "label": "Sistema pronto para uso",
+      "description": "Preferência por uma instalação já integrada, completa e funcional.",
+      "low_label": "Aceita montar o sistema",
+      "high_label": "Quer começar a usar imediatamente",
+      "match_importance": 1.1
+    },
+    {
+      "id": "graphical_tools",
+      "label": "Ferramentas gráficas",
+      "description": "Preferência por realizar configurações administrativas sem terminal.",
+      "low_label": "Aceita ferramentas de terminal",
+      "high_label": "Prefere interfaces gráficas",
+      "match_importance": 0.85
+    },
+    {
+      "id": "learning_interest",
+      "label": "Interesse em aprender",
+      "description": "Quanto a pessoa quer estudar e explorar o funcionamento do Linux.",
+      "low_label": "Quer apenas usar",
+      "high_label": "Quer aprender e experimentar",
+      "match_importance": 0.7
+    },
+    {
+      "id": "community_support",
+      "label": "Comunidade e documentação",
+      "description": "Importância de tutoriais, documentação e comunidade ampla.",
+      "low_label": "Aceita projeto menor",
+      "high_label": "Quer amplo suporte comunitário",
+      "match_importance": 0.75
+    },
+    {
+      "id": "proprietary_tolerance",
+      "label": "Tolerância a software proprietário",
+      "description": "Aceitação de drivers, codecs e programas proprietários quando úteis.",
+      "low_label": "Prioriza software livre",
+      "high_label": "Prioriza praticidade",
+      "match_importance": 0.5
+    },
+    {
+      "id": "traditional_desktop",
+      "label": "Interface tradicional",
+      "description": "Preferência por menu, barra de tarefas, bandeja e controles visíveis.",
+      "low_label": "Aceita paradigmas diferentes",
+      "high_label": "Quer desktop tradicional",
+      "match_importance": 1.25
+    },
+    {
+      "id": "workflow_novelty",
+      "label": "Novo fluxo de trabalho",
+      "description": "Disposição para aprender visões gerais, áreas de trabalho e paradigmas diferentes.",
+      "low_label": "Prefere familiaridade",
+      "high_label": "Aceita reaprender o fluxo",
+      "match_importance": 1.0
+    },
+    {
+      "id": "desktop_customization",
+      "label": "Personalização da interface",
+      "description": "Desejo de alterar painéis, menus, temas, atalhos e comportamento das janelas.",
+      "low_label": "Prefere poucas opções",
+      "high_label": "Quer personalização profunda",
+      "match_importance": 1.0
+    },
+    {
+      "id": "visual_polish",
+      "label": "Riqueza visual",
+      "description": "Importância de animações, efeitos e acabamento visual.",
+      "low_label": "Prefere simplicidade",
+      "high_label": "Valoriza efeitos e acabamento",
+      "match_importance": 0.7
+    },
+    {
+      "id": "resource_efficiency",
+      "label": "Economia de recursos",
+      "description": "Importância de baixo consumo de memória, processamento e armazenamento.",
+      "low_label": "Aceita maior consumo",
+      "high_label": "Quer máxima leveza",
+      "match_importance": 0.9
+    },
+    {
+      "id": "keyboard_workflow",
+      "label": "Fluxo orientado ao teclado",
+      "description": "Preferência por atalhos e menor dependência do mouse.",
+      "low_label": "Prefere o mouse",
+      "high_label": "Prefere o teclado",
+      "match_importance": 0.7
+    },
+    {
+      "id": "window_automation",
+      "label": "Automação de janelas",
+      "description": "Interesse em organização automática, mosaico e ferramentas avançadas de janelas.",
+      "low_label": "Organiza manualmente",
+      "high_label": "Quer organização automática",
+      "match_importance": 0.65
+    }
+  ]
+}
