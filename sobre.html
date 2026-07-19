@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Entenda a metodologia, os critérios e as limitações do teste Seu próximo Linux."
+    />
+    <title>Sobre o teste — Seu próximo Linux</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">L</span>
+        Seu próximo Linux
+      </a>
+      <nav class="header-nav" aria-label="Navegação principal">
+        <a class="quiet-link" href="index.html">Início</a>
+        <a class="quiet-link" href="sobre.html" aria-current="page">Sobre</a>
+        <a class="quiet-link" href="glossario.html">Glossário</a>
+        <a class="quiet-link" href="guia.html">Distribuições</a>
+        <a class="quiet-link" href="seguranca.html">Segurança</a>
+        <a class="button button-primary header-cta" href="teste.html"
+          >Fazer o teste</a
+        >
+      </nav>
+    </header>
+
+    <aside
+      class="backup-warning"
+      role="alert"
+      aria-labelledby="backup-warning-title"
+    >
+      <span class="backup-warning-icon" aria-hidden="true">⚠</span>
+      <div>
+        <strong id="backup-warning-title"
+          >Proteja seus dados antes de instalar</strong
+        >
+        <p>
+          Antes de instalar qualquer distribuição Linux ou alterar partições,
+          faça um backup dos arquivos importantes e confirme que consegue
+          restaurá-lo.
+        </p>
+      </div>
+    </aside>
+
+    <main class="about-page">
+      <section class="about-hero">
+        <p class="eyebrow">Sobre o projeto</p>
+        <h1>Uma recomendação que você consegue entender.</h1>
+        <p class="about-lead">
+          O teste compara suas preferências e necessidades de hardware com
+          combinações de distribuição Linux e ambiente gráfico. Ele não tenta
+          declarar uma vencedora universal: procura opções coerentes com o seu
+          contexto e deixa as concessões visíveis.
+        </p>
+        <nav class="page-index" aria-label="Nesta página">
+          <a href="#metodologia">Metodologia</a>
+          <a href="#pontuacao">Pontuação</a>
+          <a href="#complexidade">Complexidade</a>
+          <a href="#privacidade">Privacidade</a>
+          <a href="#duvidas">Dúvidas frequentes</a>
+        </nav>
+      </section>
+
+      <section
+        class="about-section"
+        id="metodologia"
+        aria-labelledby="metodologia-title"
+      >
+        <div class="about-heading">
+          <p class="section-kicker">01 · Metodologia</p>
+          <h2 id="metodologia-title">
+            O teste observa mais do que o nome da distribuição.
+          </h2>
+        </div>
+        <div class="about-content">
+          <p>
+            Cada opção cadastrada representa uma combinação completa, como
+            Fedora com GNOME ou Fedora com KDE Plasma. Isso é importante porque
+            o ambiente gráfico muda o fluxo de trabalho, a personalização, o
+            consumo de recursos e a familiaridade da interface.
+          </p>
+          <ol class="method-steps">
+            <li>
+              <strong>Preferências</strong>
+              <span
+                >50 afirmações medem 17 eixos por meio de uma escala de
+                concordância.</span
+              >
+            </li>
+            <li>
+              <strong>Hardware</strong>
+              <span
+                >10 perguntas identificam necessidades que podem alterar a
+                adequação prática.</span
+              >
+            </li>
+            <li>
+              <strong>Comparação</strong>
+              <span
+                >Seu perfil é comparado com o perfil de cada combinação
+                cadastrada.</span
+              >
+            </li>
+            <li>
+              <strong>Filtro de complexidade</strong>
+              <span
+                >Opções exigentes só aparecem quando sua prontidão permite
+                recomendá-las com segurança.</span
+              >
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section
+        class="about-section tinted-section"
+        id="pontuacao"
+        aria-labelledby="pontuacao-title"
+      >
+        <div class="about-heading">
+          <p class="section-kicker">02 · Pontuação</p>
+          <h2 id="pontuacao-title">
+            Como suas respostas viram uma compatibilidade.
+          </h2>
+        </div>
+        <div class="about-content">
+          <p>
+            Cada afirmação contribui para um ou mais eixos, com pesos positivos
+            ou negativos. As respostas são centralizadas e normalizadas em uma
+            escala de 0 a 100. “Não sei responder” é ignorado naquele cálculo,
+            em vez de ser tratado como uma opinião neutra.
+          </p>
+          <div
+            class="formula-card"
+            aria-label="Resumo da fórmula de compatibilidade"
+          >
+            <span>perfil de preferências</span>
+            <span aria-hidden="true">+</span>
+            <span>necessidades de hardware</span>
+            <span aria-hidden="true">→</span>
+            <strong>compatibilidade final</strong>
+          </div>
+          <p>
+            A distância entre seu perfil e cada opção considera a importância de
+            cada eixo. Quando há necessidades de hardware marcadas como “Sim”,
+            preferências correspondem a 85% da nota e hardware a 15%. Respostas
+            “Não” não penalizam nenhuma opção.
+          </p>
+          <aside class="information-note">
+            <strong>Percentual não é probabilidade.</strong>
+            <p>
+              Uma compatibilidade de 82% significa proximidade entre os perfis
+              cadastrados, não 82% de chance de você gostar da distribuição.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section
+        class="about-section"
+        id="complexidade"
+        aria-labelledby="complexidade-title"
+      >
+        <div class="about-heading">
+          <p class="section-kicker">03 · Complexidade</p>
+          <h2 id="complexidade-title">
+            Boa compatibilidade não basta se a manutenção for um obstáculo.
+          </h2>
+        </div>
+        <div class="about-content">
+          <p>
+            A prontidão combina autonomia técnica, interesse em aprender e
+            tolerância à manutenção. Ela não mede inteligência ou capacidade;
+            apenas ajuda a evitar uma recomendação que exija mais tempo e
+            envolvimento do que você deseja oferecer agora.
+          </p>
+          <div class="level-list">
+            <article>
+              <span>1</span>
+              <div>
+                <h3>Assistido</h3>
+                <p>
+                  Decisões prontas, instalação guiada e manutenção reduzida.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span>2</span>
+              <div>
+                <h3>Intermediário guiado</h3>
+                <p>
+                  Alguma leitura e ajustes ocasionais podem ser necessários.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span>3</span>
+              <div>
+                <h3>Autonomia alta</h3>
+                <p>
+                  Acompanhamento de atualizações e solução independente de
+                  problemas.
+                </p>
+              </div>
+            </article>
+          </div>
+          <p>
+            Uma opção que combina com suas preferências, mas ultrapassa sua
+            prontidão atual, pode aparecer como <strong>rota futura</strong>.
+            Ela é uma possibilidade para explorar depois, não uma recomendação
+            imediata.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="about-section privacy-section"
+        id="privacidade"
+        aria-labelledby="privacidade-title"
+      >
+        <div class="about-heading">
+          <p class="section-kicker">04 · Privacidade</p>
+          <h2 id="privacidade-title">
+            As respostas não saem do seu navegador.
+          </h2>
+        </div>
+        <div class="about-content">
+          <p>
+            O projeto é um site estático, sem backend. Respostas, etapa atual e
+            campos complementares são guardados no <code>localStorage</code> do
+            próprio navegador para que você possa continuar depois de recarregar
+            a página.
+          </p>
+          <p>
+            Use “Reiniciar teste” ou “Apagar e recomeçar” para remover esses
+            dados. Limpar os dados do site nas configurações do navegador produz
+            o mesmo efeito.
+          </p>
+        </div>
+      </section>
+
+      <section class="faq-section" id="duvidas" aria-labelledby="duvidas-title">
+        <p class="section-kicker">Dúvidas frequentes</p>
+        <h2 id="duvidas-title">O que vale saber antes de escolher.</h2>
+        <div class="faq-list">
+          <details>
+            <summary>
+              O resultado garante que tudo funcionará no meu computador?
+            </summary>
+            <p>
+              Não. O teste considera categorias gerais de hardware, mas não
+              substitui a verificação do modelo exato de Wi-Fi, GPU, impressora
+              ou outro periférico. Testar a distribuição em modo live antes de
+              instalar continua sendo recomendado.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Por que o teste recomenda distribuição e ambiente gráfico juntos?
+            </summary>
+            <p>
+              Porque boa parte da experiência diária vem da interface. GNOME,
+              KDE Plasma, Cinnamon, Xfce e outros ambientes diferem em fluxo,
+              recursos, consumo e possibilidades de personalização.
+            </p>
+          </details>
+          <details>
+            <summary>Por que o Arch Linux puro não aparece?</summary>
+            <p>
+              O projeto evita recomendar o Arch puro para seu público inicial.
+              Perfis interessados nesse ecossistema podem encontrar BigLinux,
+              CachyOS ou EndeavourOS, cada um com níveis diferentes de
+              assistência e complexidade.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Posso escolher uma alternativa em vez da recomendação principal?
+            </summary>
+            <p>
+              Sim. As alternativas não são resultados ruins: oferecem
+              equilíbrios diferentes, como maior estabilidade, software mais
+              recente, interface mais leve ou mais controle. Leia principalmente
+              as vantagens e concessões.
+            </p>
+          </details>
+          <details>
+            <summary>O que significa responder “Não sei”?</summary>
+            <p>
+              Nas afirmações, a resposta é excluída dos cálculos relacionados.
+              Nas perguntas de hardware, ela pode gerar um lembrete de
+              verificação, mas não reduz a nota de nenhuma distribuição.
+            </p>
+          </details>
+          <details>
+            <summary>As notas e recomendações podem mudar?</summary>
+            <p>
+              Sim. Distribuições, ambientes gráficos e suporte a hardware
+              evoluem. Os perfis cadastrados são uma aproximação que precisa de
+              revisão e calibração periódicas; o resultado deve ser um ponto de
+              partida para pesquisa.
+            </p>
+          </details>
+          <details>
+            <summary>Este teste substitui uma cópia de segurança?</summary>
+            <p>
+              Não. Antes de instalar ou substituir um sistema operacional, faça
+              backup dos arquivos importantes e confirme que consegue
+              restaurá-los. Considere dual boot ou uma máquina virtual se ainda
+              estiver avaliando.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section class="about-cta">
+        <div>
+          <p class="section-kicker">Pronto para comparar?</p>
+          <h2>Encontre uma combinação para começar.</h2>
+        </div>
+        <a class="button button-primary" href="teste.html">Começar o teste →</a>
+      </section>
+    </main>
+
+    <footer class="simple-footer">
+      <div class="simple-footer-info">
+        <a class="simple-footer-brand" href="index.html">Seu próximo Linux</a>
+        <p class="footer-notice">
+          Projeto independente, sem vínculo com as distribuições citadas. As
+          respostas são processadas e armazenadas localmente no navegador.
+        </p>
+      </div>
+      <nav aria-label="Links do rodapé">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="glossario.html">Glossário</a>
+        <a href="guia.html">Distribuições</a>
+        <a href="seguranca.html">Segurança</a>
+        <a href="teste.html">Fazer o teste</a>
+      </nav>
+    </footer>
+  </body>
+</html>

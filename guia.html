@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Guia introdutório das distribuições Linux avaliadas pelo teste, suas características, ambientes gráficos e público-alvo."
+    />
+    <title>Guia de distribuições — Seu próximo Linux</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html"
+        ><span class="brand-mark">L</span>Seu próximo Linux</a
+      >
+      <nav class="header-nav" aria-label="Navegação principal">
+        <a class="quiet-link" href="index.html">Início</a>
+        <a class="quiet-link" href="sobre.html">Sobre</a>
+        <a class="quiet-link" href="glossario.html">Glossário</a>
+        <a class="quiet-link" href="guia.html" aria-current="page"
+          >Distribuições</a
+        >
+        <a class="quiet-link" href="seguranca.html">Segurança</a>
+        <a class="button button-primary header-cta" href="teste.html"
+          >Fazer o teste</a
+        >
+      </nav>
+    </header>
+
+    <aside
+      class="backup-warning"
+      role="alert"
+      aria-labelledby="guide-backup-title"
+    >
+      <span class="backup-warning-icon" aria-hidden="true">⚠</span>
+      <div>
+        <strong id="guide-backup-title"
+          >Proteja seus dados antes de instalar</strong
+        >
+        <p>
+          Antes de instalar qualquer distribuição Linux ou alterar partições,
+          faça um backup dos arquivos importantes e confirme que consegue
+          restaurá-lo.
+        </p>
+      </div>
+    </aside>
+
+    <main class="guide-page">
+      <section class="guide-hero">
+        <p class="eyebrow">Guia de distribuições</p>
+        <h1>Conheça as propostas por trás do resultado.</h1>
+        <p>
+          Uma distribuição reúne kernel, programas, atualizações e decisões de
+          projeto. O ambiente gráfico muda a experiência, mas não transforma
+          Fedora com GNOME e Fedora com KDE Plasma em duas distribuições
+          distintas. Por isso, este guia organiza tudo por projeto.
+        </p>
+        <div class="guide-search">
+          <label for="distro-search">Filtrar distribuições</label>
+          <input
+            id="distro-search"
+            type="search"
+            placeholder="Ex.: iniciante, jogos, estável, rolling…"
+            autocomplete="off"
+            aria-describedby="distro-search-status"
+          />
+          <p id="distro-search-status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="reading-key" aria-labelledby="reading-key-title">
+        <div>
+          <p class="section-kicker">Como ler</p>
+          <h2 id="reading-key-title">Quatro aspectos para comparar.</h2>
+        </div>
+        <div class="reading-grid">
+          <article>
+            <strong>Base</strong>
+            <p>
+              De onde vêm pacotes, documentação e parte das decisões técnicas.
+            </p>
+          </article>
+          <article>
+            <strong>Atualizações</strong>
+            <p>
+              Versões fixas priorizam previsibilidade; rolling releases
+              priorizam atualidade.
+            </p>
+          </article>
+          <article>
+            <strong>Ambientes</strong>
+            <p>A interface padrão e outras opções oficialmente disponíveis.</p>
+          </article>
+          <article>
+            <strong>Público-alvo</strong>
+            <p>
+              O tipo de usuário e de envolvimento ao qual a proposta costuma
+              atender.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="distro-catalog" aria-labelledby="catalog-title">
+        <p class="section-kicker">Projetos incluídos no teste</p>
+        <h2 id="catalog-title">Distribuições, não edições.</h2>
+        <div class="distro-guide-list" id="distro-guide-list">
+          <article
+            class="distro-guide-card"
+            data-distro="linux mint iniciante ubuntu lts estável tradicional cinnamon mate xfce leve"
+          >
+            <header>
+              <span class="distro-number">01</span>
+              <div>
+                <h3>Linux Mint</h3>
+                <p>Familiaridade e baixa manutenção</p>
+              </div>
+              <span class="guide-level level-assisted">Assistido</span>
+            </header>
+            <div class="distro-guide-body">
+              <div class="distro-summary">
+                <p>
+                  Baseada principalmente no Ubuntu LTS, procura oferecer um
+                  desktop completo logo após a instalação, com ferramentas
+                  gráficas próprias e poucas surpresas no uso cotidiano.
+                </p>
+                <dl>
+                  <div>
+                    <dt>Base</dt>
+                    <dd>Ubuntu LTS</dd>
+                  </div>
+                  <div>
+                    <dt>Atualizações</dt>
+                    <dd>Versões fixas e conservadoras</dd>
+                  </div>
+                  <div>
+                    <dt>Ambientes</dt>
+                    <dd>
+                      Cinnamon é a edição principal; MATE e Xfce também são
+                      oferecidos.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="audience-box">
+                <h4>Combina com</h4>
+                <p>
+                  Iniciantes, pessoas vindas do Windows e quem deseja uma
+                  interface tradicional com pouca manutenção.
+                </p>
+                <h4>Considere antes</h4>
+                <p>
+                  A base conservadora pode trazer kernel e aplicativos menos
+                  recentes para hardware recém-lançado.
+                </p>
+                <a href="https://linuxmint.com/" target="_blank" rel="noopener"
+                  >Site oficial ↗</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="distro-guide-card"
+            data-distro="ubuntu iniciante suporte comunidade gnome flavors kubuntu xubuntu lubuntu kde plasma xfce lxqt lts"
+          >
+            <header>
+              <span class="distro-number">02</span>
+              <div>
+                <h3>Ubuntu</h3>
+                <p>Grande ecossistema e ampla documentação</p>
+              </div>
+              <span class="guide-level level-assisted">Assistido</span>
+            </header>
+            <div class="distro-guide-body">
+              <div class="distro-summary">
+                <p>
+                  Uma das bases mais difundidas do desktop Linux. Possui
+                  lançamentos regulares e versões LTS, grande comunidade,
+                  documentação abundante e amplo suporte de fornecedores.
+                </p>
+                <dl>
+                  <div>
+                    <dt>Base</dt>
+                    <dd>Debian, com repositórios e decisões próprias</dd>
+                  </div>
+                  <div>
+                    <dt>Atualizações</dt>
+                    <dd>Versões fixas; LTS oferece suporte prolongado</dd>
+                  </div>
+                  <div>
+                    <dt>Ambientes</dt>
+                    <dd>
+                      Ubuntu Desktop usa GNOME. Flavors oficiais incluem Kubuntu
+                      com KDE Plasma, Xubuntu com Xfce, Lubuntu com LXQt, Ubuntu
+                      MATE, Budgie, Cinnamon, Unity, Studio e Edubuntu.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="audience-box">
+                <h4>Combina com</h4>
+                <p>
+                  Quem quer facilidade inicial, documentação ampla,
+                  compatibilidade comercial e liberdade para escolher um flavor.
+                </p>
+                <h4>Considere antes</h4>
+                <p>
+                  Flavors mudam interface e aplicativos padrão, mas compartilham
+                  a base Ubuntu. O uso de pacotes Snap também é uma decisão
+                  marcante do projeto.
+                </p>
+                <a
+                  href="https://ubuntu.com/desktop"
+                  target="_blank"
+                  rel="noopener"
+                  >Site oficial ↗</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="distro-guide-card"
+            data-distro="zorin os iniciante windows mac visual polido ubuntu lts gnome"
+          >
+            <header>
+              <span class="distro-number">03</span>
+              <div>
+                <h3>Zorin OS</h3>
+                <p>Transição visualmente guiada</p>
+              </div>
+              <span class="guide-level level-assisted">Assistido</span>
+            </header>
+            <div class="distro-guide-body">
+              <div class="distro-summary">
+                <p>
+                  Distribuição baseada no Ubuntu LTS que enfatiza apresentação,
+                  integração e uma transição amigável para quem conhece Windows
+                  ou macOS.
+                </p>
+                <dl>
+                  <div>
+                    <dt>Base</dt>
+                    <dd>Ubuntu LTS</dd>
+                  </div>
+                  <div>
+                    <dt>Atualizações</dt>
+                    <dd>Versões fixas e conservadoras</dd>
+                  </div>
+                  <div>
+                    <dt>Ambientes</dt>
+                    <dd>
+                      Zorin Desktop, uma experiência personalizada a partir do
+                      GNOME; a edição Lite historicamente prioriza hardware
+                      modesto.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="audience-box">
+                <h4>Combina com</h4>
+                <p>
+                  Primeiros usuários que valorizam acabamento visual, decisões
+                  prontas e uma interface familiar.
+                </p>
+                <h4>Considere antes</h4>
+                <p>
+                  Alguns layouts e recursos podem depender da edição paga, e a
+                  comunidade é menor que a do Ubuntu ou Mint.
+                </p>
+                <a href="https://zorin.com/os/" target="_blank" rel="noopener"
+                  >Site oficial ↗</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="distro-guide-card"
+            data-distro="fedora atual recente desenvolvimento workstation kde plasma gnome inovação wayland"
+          >
+            <header>
+              <span class="distro-number">04</span>
+              <div>
+                <h3>Fedora Linux</h3>
+                <p>Tecnologias recentes com integração cuidadosa</p>
+              </div>
+              <span class="guide-level level-guided">Intermediário guiado</span>
+            </header>
+            <div class="distro-guide-body">
+              <div class="distro-summary">
+                <p>
+                  Projeto comunitário patrocinado pela Red Hat, conhecido por
+                  adotar cedo tecnologias do ecossistema Linux sem seguir um
+                  modelo rolling release.
+                </p>
+                <dl>
+                  <div>
+                    <dt>Base</dt>
+                    <dd>Projeto independente da família RPM</dd>
+                  </div>
+                  <div>
+                    <dt>Atualizações</dt>
+                    <dd>
+                      Versões fixas frequentes e ciclo relativamente curto
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Ambientes</dt>
+                    <dd>
+                      GNOME e KDE Plasma possuem edições principais para
+                      desktop; outros ambientes são oferecidos como spins.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="audience-box">
+                <h4>Combina com</h4>
+                <p>
+                  Desenvolvedores, hardware recente e usuários que querem
+                  software atual com uma experiência integrada.
+                </p>
+                <h4>Considere antes</h4>
+                <p>
+                  Codecs e drivers proprietários podem exigir repositórios
+                  adicionais, e atualizações de versão são mais frequentes que
+                  em sistemas LTS.
+                </p>
+                <a
+                  href="https://fedoraproject.org/"
+                  target="_blank"
+                  rel="noopener"
+                  >Site oficial ↗</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="distro-guide-card"
+            data-distro="debian estável conservador comunidade universal gnome kde plasma xfce controle servidor"
+          >
+            <header>
+              <span class="distro-number">05</span>
+              <div>
+                <h3>Debian</h3>
+                <p>Previsibilidade e compromisso comunitário</p>
+              </div>
+              <span class="guide-level level-guided">Intermediário guiado</span>
+            </header>
+            <div class="distro-guide-body">
+              <div class="distro-summary">
+                <p>
+                  Projeto comunitário independente e base de muitas outras
+                  distribuições. O ramo Stable prioriza confiabilidade,
+                  segurança e mudanças cuidadosamente controladas.
+                </p>
+                <dl>
+                  <div>
+                    <dt>Base</dt>
+                    <dd>Independente</dd>
+                  </div>
+                  <div>
+                    <dt>Atualizações</dt>
+                    <dd>
+                      Stable, Testing e Unstable; o teste considera
+                      principalmente Stable
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Ambientes</dt>
+                    <dd>
+                      GNOME é a escolha padrão, mas o instalador oferece KDE
+                      Plasma, Xfce, Cinnamon, MATE, LXQt e outros.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="audience-box">
+                <h4>Combina com</h4>
+                <p>
+                  Quem valoriza estabilidade, software livre, longa vida útil e
+                  controle sobre o que será instalado.
+                </p>
+                <h4>Considere antes</h4>
+                <p>
+                  Programas e drivers podem ser menos recentes; instalação e
+                  codecs podem pedir mais decisões que em distribuições voltadas
+                  a iniciantes.
+                </p>
+                <a href="https://www.debian.org/" target="_blank" rel="noopener"
+                  >Site oficial ↗</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="distro-guide-card"
+            data-distro="opensuse leap tumbleweed yast snapper btrfs kde plasma gnome estável rolling atual"
+          >
+            <header>
+              <span class="distro-number">06</span>
+              <div>
+                <h3>openSUSE</h3>
+                <p>Administração gráfica e escolhas explícitas</p>
+              </div>
+              <span class="guide-level level-guided">Intermediário guiado</span>
+            </header>
+            <div class="distro-guide-body">
+              <div class="distro-summary">
+                <p>
+                  Família conhecida pelo painel administrativo YaST, integração
+                  com Btrfs e snapshots do Snapper. Oferece dois caminhos de
+                  desktop com ritmos bem diferentes.
+                </p>
+                <dl>
+                  <div>
+                    <dt>Base</dt>
+                    <dd>Projeto openSUSE e tecnologias SUSE</dd>
+                  </div>
+                  <div>
+                    <dt>Atualizações</dt>
+                    <dd>
+                      Leap é estável; Tumbleweed é rolling release testada
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Ambientes</dt>
+                    <dd>
+                      O instalador oferece KDE Plasma, GNOME e Xfce sem
+                      tratá-los como distribuições separadas.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="audience-box">
+                <h4>Combina com</h4>
+                <p>
+                  Usuários que gostam de ferramentas administrativas completas;
+                  Leap atende perfis conservadores e Tumbleweed quem quer
+                  software recente.
+                </p>
+                <h4>Considere antes</h4>
+                <p>
+                  Há mais escolhas durante a instalação e o ecossistema de
+                  tutoriais em português é menor que o de Ubuntu.
+                </p>
+                <a
+                  href="https://www.opensuse.org/"
+                  target="_blank"
+                  rel="noopener"
+                  >Site oficial ↗</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="distro-guide-card"
+            data-distro="pop os system76 cosmic ubuntu nvidia jogos desenvolvimento mosaico teclado"
+          >
+            <header>
+              <span class="distro-number">07</span>
+              <div>
+                <h3>Pop!_OS</h3>
+                <p>Produtividade, criação e hardware dedicado</p>
+              </div>
+              <span class="guide-level level-guided">Intermediário guiado</span>
+            </header>
+            <div class="distro-guide-body">
+              <div class="distro-summary">
+                <p>
+                  Distribuição da System76 baseada no Ubuntu, com atenção a
+                  notebooks, gráficos híbridos, Nvidia e fluxos produtivos
+                  orientados a teclado e mosaico.
+                </p>
+                <dl>
+                  <div>
+                    <dt>Base</dt>
+                    <dd>Ubuntu</dd>
+                  </div>
+                  <div>
+                    <dt>Atualizações</dt>
+                    <dd>Versões fixas</dd>
+                  </div>
+                  <div>
+                    <dt>Ambientes</dt>
+                    <dd>
+                      COSMIC é o ambiente próprio do projeto, com fluxo moderno
+                      e recursos integrados de organização de janelas.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="audience-box">
+                <h4>Combina com</h4>
+                <p>
+                  Criadores, desenvolvedores, jogadores e usuários de notebooks
+                  com GPU dedicada que aceitam um fluxo menos tradicional.
+                </p>
+                <h4>Considere antes</h4>
+                <p>
+                  COSMIC é um ecossistema mais jovem e pode exigir adaptação de
+                  quem espera uma barra de tarefas convencional.
+                </p>
+                <a
+                  href="https://system76.com/pop/"
+                  target="_blank"
+                  rel="noopener"
+                  >Site oficial ↗</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="distro-guide-card"
+            data-distro="biglinux brasileiro português iniciante manjaro arch rolling kde plasma jogos ferramentas"
+          >
+            <header>
+              <span class="distro-number">08</span>
+              <div>
+                <h3>BigLinux</h3>
+                <p>Ecossistema rolling com suporte em português</p>
+              </div>
+              <span class="guide-level level-assisted">Assistido</span>
+            </header>
+            <div class="distro-guide-body">
+              <div class="distro-summary">
+                <p>
+                  Projeto brasileiro que procura tornar uma base próxima do
+                  ecossistema Arch/Manjaro mais acessível por meio de
+                  ferramentas próprias, personalização e comunidade em
+                  português.
+                </p>
+                <dl>
+                  <div>
+                    <dt>Base</dt>
+                    <dd>Família Arch/Manjaro</dd>
+                  </div>
+                  <div>
+                    <dt>Atualizações</dt>
+                    <dd>Rolling release curada</dd>
+                  </div>
+                  <div>
+                    <dt>Ambientes</dt>
+                    <dd>
+                      KDE Plasma com personalizações e ferramentas do projeto.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="audience-box">
+                <h4>Combina com</h4>
+                <p>
+                  Usuários brasileiros que querem software recente, KDE Plasma e
+                  mais assistência para entrar no ecossistema rolling.
+                </p>
+                <h4>Considere antes</h4>
+                <p>
+                  Mesmo facilitada, uma base rolling exige atualizações
+                  regulares e pode demandar atenção após mudanças maiores.
+                </p>
+                <a
+                  href="https://www.biglinux.com.br/"
+                  target="_blank"
+                  rel="noopener"
+                  >Site oficial ↗</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="distro-guide-card"
+            data-distro="cachyos arch rolling desempenho jogos otimização atual kde plasma avançado"
+          >
+            <header>
+              <span class="distro-number">09</span>
+              <div>
+                <h3>CachyOS</h3>
+                <p>Desempenho e software muito recente</p>
+              </div>
+              <span class="guide-level level-autonomous">Autonomia alta</span>
+            </header>
+            <div class="distro-guide-body">
+              <div class="distro-summary">
+                <p>
+                  Distribuição baseada no Arch com otimizações de desempenho,
+                  kernels próprios e foco forte em hardware atual e jogos.
+                </p>
+                <dl>
+                  <div>
+                    <dt>Base</dt>
+                    <dd>Arch Linux</dd>
+                  </div>
+                  <div>
+                    <dt>Atualizações</dt>
+                    <dd>Rolling release</dd>
+                  </div>
+                  <div>
+                    <dt>Ambientes</dt>
+                    <dd>
+                      KDE Plasma é a opção mais destacada; o instalador oferece
+                      outros ambientes e gerenciadores de janelas.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="audience-box">
+                <h4>Combina com</h4>
+                <p>
+                  Jogadores e usuários experientes que valorizam desempenho,
+                  pacotes atuais e aceitam pesquisar soluções.
+                </p>
+                <h4>Considere antes</h4>
+                <p>
+                  Atualizações contínuas e proximidade com Arch pressupõem
+                  autonomia para manutenção e recuperação de problemas.
+                </p>
+                <a href="https://cachyos.org/" target="_blank" rel="noopener"
+                  >Site oficial ↗</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="distro-guide-card"
+            data-distro="endeavouros arch rolling terminal aprender controle kde plasma xfce avançado"
+          >
+            <header>
+              <span class="distro-number">10</span>
+              <div>
+                <h3>EndeavourOS</h3>
+                <p>Uma entrada direta no ecossistema Arch</p>
+              </div>
+              <span class="guide-level level-autonomous">Autonomia alta</span>
+            </header>
+            <div class="distro-guide-body">
+              <div class="distro-summary">
+                <p>
+                  Distribuição próxima do Arch Linux que simplifica a instalação
+                  e oferece uma comunidade acolhedora, mantendo grande parte da
+                  administração sob responsabilidade do usuário.
+                </p>
+                <dl>
+                  <div>
+                    <dt>Base</dt>
+                    <dd>Arch Linux</dd>
+                  </div>
+                  <div>
+                    <dt>Atualizações</dt>
+                    <dd>Rolling release</dd>
+                  </div>
+                  <div>
+                    <dt>Ambientes</dt>
+                    <dd>
+                      O instalador oferece KDE Plasma, Xfce, GNOME, Cinnamon,
+                      MATE e outras opções; a escolha não cria outra
+                      distribuição.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="audience-box">
+                <h4>Combina com</h4>
+                <p>
+                  Quem quer aprender, usar terminal e construir sua experiência
+                  com poucas decisões impostas.
+                </p>
+                <h4>Considere antes</h4>
+                <p>
+                  Não é uma distribuição “pronta e esqueça”: leitura de anúncios
+                  e solução autônoma de problemas fazem parte da proposta.
+                </p>
+                <a
+                  href="https://endeavouros.com/"
+                  target="_blank"
+                  rel="noopener"
+                  >Site oficial ↗</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="no-guide-results" id="no-guide-results" hidden>
+          <span aria-hidden="true">?</span>
+          <h3>Nenhuma distribuição encontrada</h3>
+          <p>
+            Tente buscar uma característica mais ampla, como “estável”, “jogos”
+            ou “iniciante”.
+          </p>
+        </div>
+      </section>
+
+      <section class="guide-decision">
+        <div>
+          <p class="section-kicker">O próximo passo</p>
+          <h2>Use o guia para interpretar, não para substituir o resultado.</h2>
+          <p>
+            A recomendação cruza preferências, hardware e prontidão. Depois,
+            consulte este guia para entender a proposta do projeto, compare as
+            concessões e teste a imagem live sempre que possível.
+          </p>
+        </div>
+        <div class="guide-decision-actions">
+          <a class="button button-primary" href="teste.html">Fazer o teste →</a
+          ><a class="button button-secondary" href="glossario.html"
+            >Consultar o glossário</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="simple-footer">
+      <div class="simple-footer-info">
+        <a class="simple-footer-brand" href="index.html">Seu próximo Linux</a>
+        <p class="footer-notice">
+          Projeto independente, sem vínculo com as distribuições citadas. As
+          respostas são processadas e armazenadas localmente no navegador.
+        </p>
+      </div>
+      <nav aria-label="Links do rodapé">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="glossario.html">Glossário</a>
+        <a href="guia.html">Distribuições</a>
+        <a href="seguranca.html">Segurança</a>
+        <a href="teste.html">Fazer o teste</a>
+      </nav>
+    </footer>
+
+    <script type="module" src="js/guide.js"></script>
+  </body>
+</html>

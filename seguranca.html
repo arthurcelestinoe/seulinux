@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Guia introdutório de segurança no Linux: sudo, comandos destrutivos, atualizações, backups, fontes de software e cuidados no terminal."
+    />
+    <title>Guia de segurança — Seu próximo Linux</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html"
+        ><span class="brand-mark">L</span>Seu próximo Linux</a
+      >
+      <nav class="header-nav" aria-label="Navegação principal">
+        <a class="quiet-link" href="index.html">Início</a>
+        <a class="quiet-link" href="sobre.html">Sobre</a>
+        <a class="quiet-link" href="glossario.html">Glossário</a>
+        <a class="quiet-link" href="guia.html">Distribuições</a>
+        <a class="quiet-link" href="seguranca.html" aria-current="page"
+          >Segurança</a
+        >
+        <a class="button button-primary header-cta" href="teste.html"
+          >Fazer o teste</a
+        >
+      </nav>
+    </header>
+
+    <main class="security-page">
+      <section class="security-hero">
+        <p class="eyebrow">Segurança para iniciantes</p>
+        <h1>Entenda o comando antes de pressionar Enter.</h1>
+        <p>
+          Linux oferece muito controle — inclusive para apagar ou substituir
+          partes essenciais do sistema. Segurança começa com hábitos simples:
+          atualizar, usar fontes confiáveis, limitar privilégios e parar quando
+          você não entende o que será alterado.
+        </p>
+        <div class="security-principle">
+          <span aria-hidden="true">!</span>
+          <p>
+            <strong>Regra principal</strong> Se um tutorial pede
+            <code>sudo</code>, altera discos ou baixa um script para execução
+            imediata, não prossiga até entender a finalidade, a fonte e o alvo
+            do comando.
+          </p>
+        </div>
+        <nav class="page-index" aria-label="Nesta página">
+          <a href="#habitos">Hábitos essenciais</a>
+          <a href="#sudo">sudo e root</a>
+          <a href="#comandos">Comandos de risco</a>
+          <a href="#verificar">Antes de executar</a>
+          <a href="#incidente">Se algo der errado</a>
+        </nav>
+      </section>
+
+      <section
+        class="security-section"
+        id="habitos"
+        aria-labelledby="habitos-title"
+      >
+        <div class="security-heading">
+          <p class="section-kicker">01 · Prevenção</p>
+          <h2 id="habitos-title">
+            Hábitos que evitam a maioria dos problemas.
+          </h2>
+        </div>
+        <div class="security-content">
+          <div class="safety-grid">
+            <article>
+              <span aria-hidden="true">↻</span>
+              <h3>Mantenha o sistema atualizado</h3>
+              <p>
+                Instale atualizações de segurança pelos mecanismos da
+                distribuição. Reinicie quando uma atualização de kernel ou
+                serviço solicitar.
+              </p>
+            </article>
+            <article>
+              <span aria-hidden="true">▣</span>
+              <h3>Tenha backups verificáveis</h3>
+              <p>
+                Mantenha ao menos uma cópia fora do computador. Um backup só é
+                confiável quando você sabe restaurar um arquivo dele.
+              </p>
+            </article>
+            <article>
+              <span aria-hidden="true">⌂</span>
+              <h3>Prefira fontes oficiais</h3>
+              <p>
+                Use os repositórios da distribuição e lojas reconhecidas.
+                Repositórios de terceiros ampliam confiança e manutenção
+                necessárias.
+              </p>
+            </article>
+            <article>
+              <span aria-hidden="true">●</span>
+              <h3>Use privilégios mínimos</h3>
+              <p>
+                Trabalhe como usuário comum. Eleve privilégios apenas para a
+                tarefa administrativa que realmente precisa deles.
+              </p>
+            </article>
+            <article>
+              <span aria-hidden="true">◆</span>
+              <h3>Proteja suas contas</h3>
+              <p>
+                Use senhas únicas, bloqueio de tela e autenticação em dois
+                fatores nos serviços que oferecem esse recurso.
+              </p>
+            </article>
+            <article>
+              <span aria-hidden="true">◎</span>
+              <h3>Reduza o que está exposto</h3>
+              <p>
+                Não habilite serviços de rede que você não usa. Em redes
+                públicas, mantenha compartilhamentos desligados e o firewall
+                ativo.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="security-section security-tinted"
+        id="sudo"
+        aria-labelledby="sudo-title"
+      >
+        <div class="security-heading">
+          <p class="section-kicker">02 · Privilégios</p>
+          <h2 id="sudo-title">
+            <code>sudo</code> não torna um comando mais correto.
+          </h2>
+        </div>
+        <div class="security-content">
+          <p>
+            <code>sudo</code> executa uma tarefa com privilégios
+            administrativos. Isso permite instalar pacotes e configurar o
+            sistema, mas também remove proteções que normalmente impedem um
+            usuário comum de alterar arquivos críticos.
+          </p>
+          <div class="sudo-rules">
+            <div>
+              <strong>Leia depois de <code>sudo</code></strong>
+              <p>
+                É o restante da linha que determina a ação. Não digite a senha
+                automaticamente.
+              </p>
+            </div>
+            <div>
+              <strong>Uma autorização pode permanecer ativa</strong>
+              <p>
+                O terminal pode não pedir a senha novamente por alguns minutos.
+                Ausência do pedido não significa ausência de risco.
+              </p>
+            </div>
+            <div>
+              <strong>Não trabalhe como root por hábito</strong>
+              <p>
+                Uma sessão administrativa prolongada aumenta o impacto de erros
+                de digitação e comandos copiados.
+              </p>
+            </div>
+          </div>
+          <aside class="information-note">
+            <strong>Senha invisível é normal</strong>
+            <p>
+              Ao digitar a senha no terminal, geralmente nenhum caractere ou
+              asterisco aparece. Digite com cuidado e pressione Enter.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section
+        class="danger-section"
+        id="comandos"
+        aria-labelledby="commands-title"
+      >
+        <p class="section-kicker">03 · Pare e confira</p>
+        <h2 id="commands-title">Padrões de comando que exigem cuidado.</h2>
+        <p class="danger-intro">
+          Os exemplos abaixo são apresentados para reconhecimento. Não os
+          execute. Um único caractere pode mudar completamente o alvo de uma
+          operação.
+        </p>
+        <div class="danger-list">
+          <article class="danger-card danger-critical">
+            <div class="danger-label">
+              <span>Risco crítico</span><strong>Remoção recursiva</strong>
+            </div>
+            <div>
+              <code aria-label="sudo rm menos erre efe espaço barra asterisco"
+                >sudo rm -rf /*</code
+              >
+              <p>
+                <code>rm</code> remove, <code>-r</code> percorre diretórios,
+                <code>-f</code> ignora confirmações e <code>/*</code> aponta
+                para o conteúdo da raiz do sistema. Com privilégios
+                administrativos, pode destruir o sistema e dados montados.
+              </p>
+              <strong class="safe-action"
+                >Antes de qualquer <code>rm -r</code>: confirme o diretório com
+                <code>pwd</code> e liste o alvo exato com
+                <code>ls</code>.</strong
+              >
+            </div>
+          </article>
+          <article class="danger-card">
+            <div class="danger-label">
+              <span>Alto risco</span><strong>Escrita direta em disco</strong>
+            </div>
+            <div>
+              <code>sudo dd … of=/dev/sdX</code>
+              <p>
+                <code>dd</code> copia dados sem perguntar se o destino contém
+                arquivos. Confundir o dispositivo de destino pode sobrescrever
+                um disco inteiro.
+              </p>
+              <strong class="safe-action"
+                >Confira nomes, tamanhos e sistemas de arquivos com
+                <code>lsblk -f</code>. Não adivinhe qual dispositivo é o
+                pendrive.</strong
+              >
+            </div>
+          </article>
+          <article class="danger-card">
+            <div class="danger-label">
+              <span>Alto risco</span><strong>Formatação</strong>
+            </div>
+            <div>
+              <code>sudo mkfs.… /dev/sdX</code>
+              <p>
+                Comandos <code>mkfs</code> criam um novo sistema de arquivos.
+                Isso torna os dados anteriores do dispositivo inacessíveis e
+                pode dificultar a recuperação.
+              </p>
+              <strong class="safe-action"
+                >Desmonte, identifique e confirme o dispositivo. Se houver
+                dúvida, pare e use uma ferramenta gráfica de discos.</strong
+              >
+            </div>
+          </article>
+          <article class="danger-card">
+            <div class="danger-label">
+              <span>Origem desconhecida</span
+              ><strong>Download executado imediatamente</strong>
+            </div>
+            <div>
+              <code>curl endereço | sudo sh</code>
+              <p>
+                Esse padrão baixa conteúdo da internet e o entrega diretamente a
+                um shell administrativo. Você pode executar algo diferente do
+                que imaginava, inclusive se o site for comprometido.
+              </p>
+              <strong class="safe-action"
+                >Baixe o arquivo, abra em um editor, confirme a fonte e procure
+                instruções oficiais antes de executar.</strong
+              >
+            </div>
+          </article>
+          <article class="danger-card">
+            <div class="danger-label">
+              <span>Permissões</span><strong>Acesso liberado para todos</strong>
+            </div>
+            <div>
+              <code>chmod -R 777 caminho</code>
+              <p>
+                Concede leitura, escrita e execução a todos os usuários de forma
+                recursiva. Frequentemente mascara o problema real e pode expor
+                arquivos sensíveis.
+              </p>
+              <strong class="safe-action"
+                >Descubra qual usuário e qual permissão são realmente
+                necessários. Não use <code>777</code> como solução
+                genérica.</strong
+              >
+            </div>
+          </article>
+          <article class="danger-card">
+            <div class="danger-label">
+              <span>Sobrescrita</span><strong>Redirecionamento de saída</strong>
+            </div>
+            <div>
+              <code>comando &gt; arquivo-importante</code>
+              <p>
+                Um único <code>&gt;</code> substitui o conteúdo do arquivo antes
+                de gravar a nova saída. Dois sinais
+                <code>&gt;&gt;</code> acrescentam ao final, mas também exigem
+                conferir o destino.
+              </p>
+              <strong class="safe-action"
+                >Use um arquivo temporário e compare o resultado antes de
+                substituir uma configuração existente.</strong
+              >
+            </div>
+          </article>
+          <article class="danger-card">
+            <div class="danger-label">
+              <span>Escopo amplo</span><strong>Alterações recursivas</strong>
+            </div>
+            <div>
+              <code>sudo chown -R …</code>
+              <p>
+                <code>chown</code> altera o proprietário. Com <code>-R</code> e
+                um caminho amplo, pode quebrar permissões necessárias para o
+                sistema iniciar ou para programas funcionarem.
+              </p>
+              <strong class="safe-action"
+                >Aplique a mudança no menor diretório possível e registre os
+                valores anteriores.</strong
+              >
+            </div>
+          </article>
+          <article class="danger-card">
+            <div class="danger-label">
+              <span>Variáveis e curingas</span
+              ><strong>Alvo diferente do esperado</strong>
+            </div>
+            <div>
+              <code>rm -r "$PASTA"/*</code>
+              <p>
+                Se uma variável estiver vazia, incorreta ou não validada, o
+                shell pode formar um caminho diferente do pretendido. Curingas
+                como <code>*</code> expandem para muitos arquivos.
+              </p>
+              <strong class="safe-action"
+                >Mostre o valor com <code>printf</code> e liste a expansão antes
+                de permitir uma operação destrutiva.</strong
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="security-section"
+        id="verificar"
+        aria-labelledby="verify-title"
+      >
+        <div class="security-heading">
+          <p class="section-kicker">04 · Checklist</p>
+          <h2 id="verify-title">Sete perguntas antes de executar.</h2>
+        </div>
+        <div class="security-content">
+          <ol class="command-checklist">
+            <li>
+              <strong>De onde veio?</strong
+              ><span
+                >Prefira documentação oficial. Comentários, vídeos e respostas
+                antigas podem estar incompletos.</span
+              >
+            </li>
+            <li>
+              <strong>Serve para minha distribuição e versão?</strong
+              ><span
+                >Gerenciadores de pacotes, caminhos e serviços variam.</span
+              >
+            </li>
+            <li>
+              <strong>O que cada parte faz?</strong
+              ><span
+                >Consulte <code>man comando</code> ou
+                <code>comando --help</code>. Não prossiga se a explicação
+                continuar obscura.</span
+              >
+            </li>
+            <li>
+              <strong>Qual é o alvo real?</strong
+              ><span
+                >Use comandos somente de leitura como <code>pwd</code>,
+                <code>ls -la</code>, <code>file</code>, <code>df -h</code> e
+                <code>lsblk -f</code>.</span
+              >
+            </li>
+            <li>
+              <strong>Precisa mesmo de <code>sudo</code>?</strong
+              ><span
+                >Se funciona sem privilégios administrativos, não os
+                conceda.</span
+              >
+            </li>
+            <li>
+              <strong>Existe prévia ou simulação?</strong
+              ><span
+                >Algumas ferramentas oferecem opções como “dry run”. Confirme na
+                ajuda da própria ferramenta.</span
+              >
+            </li>
+            <li>
+              <strong>Consigo desfazer?</strong
+              ><span
+                >Tenha backup, snapshot quando aplicável e um plano de
+                recuperação antes de mudanças amplas.</span
+              >
+            </li>
+          </ol>
+          <aside class="security-note">
+            <span aria-hidden="true">i</span>
+            <p>
+              <strong>Mensagens de confirmação merecem leitura.</strong> Se o
+              gerenciador informa que removerá dezenas de pacotes, não aceite
+              até entender por quê.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section
+        class="security-section security-tinted"
+        id="incidente"
+        aria-labelledby="incident-title"
+      >
+        <div class="security-heading">
+          <p class="section-kicker">05 · Recuperação</p>
+          <h2 id="incident-title">Se você suspeitar que algo deu errado.</h2>
+        </div>
+        <div class="security-content">
+          <ol class="incident-steps">
+            <li>
+              <span>1</span>
+              <div>
+                <strong>Pare de executar comandos</strong>
+                <p>
+                  Tentativas aleatórias podem apagar evidências ou tornar a
+                  recuperação mais difícil.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>2</span>
+              <div>
+                <strong>Desconecte a rede se houver suspeita de invasão</strong>
+                <p>
+                  Isso pode limitar comunicação externa enquanto você procura
+                  ajuda em outro dispositivo.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>3</span>
+              <div>
+                <strong>Registre o que aconteceu</strong>
+                <p>
+                  Anote o comando, a mensagem, o horário e mudanças percebidas.
+                  Não publique senhas, chaves ou dados pessoais.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>4</span>
+              <div>
+                <strong>Procure ajuda específica</strong>
+                <p>
+                  Use a documentação e o fórum da sua distribuição. Explique o
+                  contexto sem omitir o comando executado.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>5</span>
+              <div>
+                <strong>Restaure a partir de fonte confiável</strong>
+                <p>
+                  Em comprometimento confirmado, trocar senhas em outro
+                  dispositivo e reinstalar pode ser mais seguro que tentar
+                  “limpar” o sistema.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="security-sources">
+        <div>
+          <p class="section-kicker">Continue aprendendo</p>
+          <h2>Consulte a documentação da sua distribuição.</h2>
+          <p>
+            Configurações de firewall, atualizações automáticas e políticas de
+            segurança variam. Use este guia como ponto de partida e confirme
+            procedimentos na documentação oficial.
+          </p>
+        </div>
+        <div class="security-source-links">
+          <a
+            href="https://documentation.ubuntu.com/security/"
+            target="_blank"
+            rel="noopener"
+            >Ubuntu Security ↗</a
+          ><a
+            href="https://www.debian.org/doc/manuals/securing-debian-manual/"
+            target="_blank"
+            rel="noopener"
+            >Securing Debian Manual ↗</a
+          ><a
+            href="https://docs.fedoraproject.org/"
+            target="_blank"
+            rel="noopener"
+            >Fedora Docs ↗</a
+          ><a href="glossario.html">Consultar termos no glossário →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="simple-footer">
+      <div class="simple-footer-info">
+        <a class="simple-footer-brand" href="index.html">Seu próximo Linux</a>
+        <p class="footer-notice">
+          Projeto independente, sem vínculo com as distribuições citadas. As
+          respostas são processadas e armazenadas localmente no navegador.
+        </p>
+      </div>
+      <nav aria-label="Links do rodapé">
+        <a href="index.html">Início</a><a href="sobre.html">Sobre</a
+        ><a href="glossario.html">Glossário</a
+        ><a href="guia.html">Distribuições</a
+        ><a href="seguranca.html" aria-current="page">Segurança</a
+        ><a href="teste.html">Fazer o teste</a>
+      </nav>
+    </footer>
+  </body>
+</html>

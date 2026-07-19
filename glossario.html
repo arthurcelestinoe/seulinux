@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Glossário rápido de termos comuns do Linux, como kernel, terminal, shell, repositório, Wayland e gerenciador de pacotes."
+    />
+    <title>Glossário Linux — Seu próximo Linux</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">L</span>
+        Seu próximo Linux
+      </a>
+      <nav class="header-nav" aria-label="Navegação principal">
+        <a class="quiet-link" href="index.html">Início</a>
+        <a class="quiet-link" href="sobre.html">Sobre</a>
+        <a class="quiet-link" href="glossario.html" aria-current="page"
+          >Glossário</a
+        >
+        <a class="quiet-link" href="guia.html">Distribuições</a>
+        <a class="quiet-link" href="seguranca.html">Segurança</a>
+        <a class="button button-primary header-cta" href="teste.html"
+          >Fazer o teste</a
+        >
+      </nav>
+    </header>
+
+    <main class="glossary-page">
+      <section class="glossary-hero">
+        <p class="eyebrow">Glossário Linux</p>
+        <h1>Termos técnicos, sem complicação.</h1>
+        <p>
+          Consulte explicações rápidas para palavras que aparecem em guias,
+          fóruns e resultados do teste. As definições são introdutórias: o
+          objetivo é ajudar você a continuar a leitura sem perder o contexto.
+        </p>
+        <div class="glossary-search">
+          <label for="term-search">Pesquisar um termo</label>
+          <div>
+            <span aria-hidden="true">⌕</span>
+            <input
+              id="term-search"
+              type="search"
+              placeholder="Ex.: kernel, Wayland, pacote…"
+              autocomplete="off"
+              aria-describedby="search-status"
+            />
+          </div>
+          <p id="search-status" class="search-status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <div class="glossary-layout">
+        <nav class="glossary-index" aria-label="Categorias do glossário">
+          <span>Nesta página</span>
+          <a href="#fundamentos">Fundamentos</a>
+          <a href="#sistema">Sistema e permissões</a>
+          <a href="#programas">Programas e pacotes</a>
+          <a href="#interface">Interface gráfica</a>
+          <a href="#hardware">Hardware e inicialização</a>
+          <a href="#formatos">Discos e arquivos</a>
+        </nav>
+
+        <div class="glossary-content" id="glossary-content">
+          <section class="term-group" id="fundamentos" data-group>
+            <div class="term-group-heading">
+              <span>01</span>
+              <div>
+                <p class="section-kicker">Comece por aqui</p>
+                <h2>Fundamentos</h2>
+              </div>
+            </div>
+            <dl class="term-grid">
+              <div class="term-card" data-term="linux sistema operacional">
+                <dt>Linux</dt>
+                <dd>
+                  Em sentido estrito, é o kernel. No uso cotidiano, “Linux”
+                  também descreve sistemas completos construídos ao redor dele,
+                  como Ubuntu, Fedora e Linux Mint.
+                </dd>
+              </div>
+              <div class="term-card" data-term="kernel nucleo hardware driver">
+                <dt>Kernel</dt>
+                <dd>
+                  É o núcleo do sistema. Faz a ponte entre programas e hardware,
+                  gerenciando memória, processador, dispositivos e processos.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="distribuicao distro ubuntu fedora mint"
+              >
+                <dt>Distribuição (distro)</dt>
+                <dd>
+                  Um sistema completo que reúne o kernel Linux, programas,
+                  instalador, atualizações e decisões próprias de configuração.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="ambiente grafico desktop gnome kde plasma cinnamon xfce"
+              >
+                <dt>Ambiente gráfico</dt>
+                <dd>
+                  O conjunto que forma a experiência visual: painel, menu,
+                  janelas, configurações e aplicativos básicos. GNOME, KDE
+                  Plasma e Xfce são exemplos.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="software livre codigo aberto open source"
+              >
+                <dt>Software livre / código aberto</dt>
+                <dd>
+                  Software cujo código pode ser estudado e, conforme a licença,
+                  modificado e redistribuído. “Livre” se refere a liberdades,
+                  não necessariamente a preço.
+                </dd>
+              </div>
+              <div class="term-card" data-term="LTS suporte longo prazo versao">
+                <dt>LTS</dt>
+                <dd>
+                  “Suporte de longo prazo”. Versão mantida por mais tempo,
+                  geralmente voltada a quem prefere estabilidade e menos
+                  mudanças.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="rolling release atualizacao continua"
+              >
+                <dt>Rolling release</dt>
+                <dd>
+                  Modelo que recebe atualizações contínuas, sem depender de
+                  grandes reinstalações entre versões. Traz software recente,
+                  mas pede acompanhamento maior.
+                </dd>
+              </div>
+              <div class="term-card" data-term="live usb pendrive testar">
+                <dt>Sessão live</dt>
+                <dd>
+                  Permite iniciar uma distribuição pelo pendrive para testar
+                  interface e hardware sem instalá-la no disco.
+                </dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="term-group" id="sistema" data-group>
+            <div class="term-group-heading">
+              <span>02</span>
+              <div>
+                <p class="section-kicker">Por baixo da interface</p>
+                <h2>Sistema e permissões</h2>
+              </div>
+            </div>
+            <dl class="term-grid">
+              <div
+                class="term-card"
+                data-term="terminal console comandos janela"
+              >
+                <dt>Terminal</dt>
+                <dd>
+                  Aplicativo que oferece uma interface de texto para executar
+                  comandos. É uma janela; o programa que interpreta os comandos
+                  é o shell.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="shell bash zsh comandos interpretador"
+              >
+                <dt>Shell</dt>
+                <dd>
+                  Programa que interpreta comandos e executa tarefas. Bash e Zsh
+                  são shells comuns. Também pode ser usado em scripts de
+                  automação.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="diretorio pasta caminho filesystem"
+              >
+                <dt>Diretório</dt>
+                <dd>
+                  O equivalente a uma pasta. Diretórios organizam arquivos em
+                  uma hierarquia que começa em <code>/</code>, chamado diretório
+                  raiz.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="root superusuario administrador raiz slash"
+              >
+                <dt>Root</dt>
+                <dd>
+                  Pode significar o usuário administrador, com acesso total, ou
+                  o diretório raiz <code>/</code>. O contexto indica qual dos
+                  dois está sendo mencionado.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="sudo administrador permissao comando"
+              >
+                <dt>sudo</dt>
+                <dd>
+                  Executa um comando com privilégios administrativos, após
+                  autenticação. Deve ser usado com atenção porque permite
+                  alterar partes críticas do sistema.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="permissoes leitura escrita execucao chmod dono"
+              >
+                <dt>Permissões</dt>
+                <dd>
+                  Regras que determinam quem pode ler, modificar ou executar um
+                  arquivo. Normalmente são separadas entre dono, grupo e outros
+                  usuários.
+                </dd>
+              </div>
+              <div class="term-card" data-term="processo programa execucao pid">
+                <dt>Processo</dt>
+                <dd>
+                  Uma instância de um programa em execução. Cada processo recebe
+                  um identificador, chamado PID, e usa recursos como memória e
+                  processador.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="daemon servico segundo plano background"
+              >
+                <dt>Daemon</dt>
+                <dd>
+                  Programa que funciona em segundo plano oferecendo um serviço,
+                  como rede, impressão ou agendamento. Geralmente inicia junto
+                  com o sistema.
+                </dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="term-group" id="programas" data-group>
+            <div class="term-group-heading">
+              <span>03</span>
+              <div>
+                <p class="section-kicker">Instalação e atualização</p>
+                <h2>Programas e pacotes</h2>
+              </div>
+            </div>
+            <dl class="term-grid">
+              <div
+                class="term-card"
+                data-term="pacote programa biblioteca metadados"
+              >
+                <dt>Pacote</dt>
+                <dd>
+                  Arquivo preparado para instalar um programa, biblioteca ou
+                  componente, incluindo informações de versão e dependências.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="gerenciador pacotes apt dnf pacman zypper instalar atualizar"
+              >
+                <dt>Gerenciador de pacotes</dt>
+                <dd>
+                  Ferramenta que instala, atualiza e remove pacotes com
+                  segurança. APT, DNF, Pacman e Zypper são exemplos.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="repositorio repo servidor programas pacotes fonte"
+              >
+                <dt>Repositório</dt>
+                <dd>
+                  Fonte organizada de pacotes mantida pela distribuição ou por
+                  terceiros. O gerenciador consulta repositórios para encontrar
+                  programas e atualizações.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="dependencia biblioteca programa requisito"
+              >
+                <dt>Dependência</dt>
+                <dd>
+                  Outro pacote necessário para um programa funcionar. O
+                  gerenciador de pacotes normalmente resolve e instala
+                  dependências automaticamente.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="flatpak aplicativo sandbox flathub"
+              >
+                <dt>Flatpak</dt>
+                <dd>
+                  Formato de aplicativo que funciona em várias distribuições e
+                  isola parte do programa do sistema. Flathub é seu repositório
+                  mais conhecido.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="snap aplicativo canonical ubuntu sandbox"
+              >
+                <dt>Snap</dt>
+                <dd>
+                  Formato de pacote criado pela Canonical, usado principalmente
+                  no Ubuntu. Inclui dependências e recebe atualizações
+                  automáticas.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="appimage aplicativo portatil executavel"
+              >
+                <dt>AppImage</dt>
+                <dd>
+                  Aplicativo distribuído como um único arquivo executável. Em
+                  muitos casos não exige instalação, mas atualizações podem ser
+                  manuais.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="codec audio video multimidia proprietario"
+              >
+                <dt>Codec</dt>
+                <dd>
+                  Componente que codifica ou decodifica áudio e vídeo. Algumas
+                  distribuições não incluem certos codecs por padrão devido a
+                  licenças ou patentes.
+                </dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="term-group" id="interface" data-group>
+            <div class="term-group-heading">
+              <span>04</span>
+              <div>
+                <p class="section-kicker">O que aparece na tela</p>
+                <h2>Interface gráfica</h2>
+              </div>
+            </div>
+            <dl class="term-grid">
+              <div
+                class="term-card"
+                data-term="GUI interface grafica mouse janelas"
+              >
+                <dt>GUI</dt>
+                <dd>
+                  “Interface gráfica do usuário”. Permite interagir com janelas,
+                  botões, menus e ícones, em contraste com uma interface baseada
+                  somente em texto.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="wayland protocolo grafico compositor tela"
+              >
+                <dt>Wayland</dt>
+                <dd>
+                  Protocolo gráfico moderno usado para exibir janelas e receber
+                  entradas de teclado e mouse. Busca mais segurança e melhor
+                  suporte a telas atuais.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="X11 xorg protocolo grafico legado compatibilidade"
+              >
+                <dt>X11 / X.Org</dt>
+                <dd>
+                  Sistema gráfico tradicional do Linux, maduro e amplamente
+                  compatível. Está sendo gradualmente substituído pelo Wayland.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="compositor janelas efeitos wayland kwin mutter"
+              >
+                <dt>Compositor</dt>
+                <dd>
+                  Organiza e desenha as janelas na tela, cuidando de efeitos,
+                  transparência e sincronização. KWin e Mutter são exemplos.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="gerenciador janelas window manager tiling mosaico"
+              >
+                <dt>Gerenciador de janelas</dt>
+                <dd>
+                  Controla posição, tamanho e comportamento das janelas. Pode
+                  fazer parte de um ambiente gráfico ou ser usado sozinho.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="HiDPI alta densidade escala 4k tela"
+              >
+                <dt>HiDPI</dt>
+                <dd>
+                  Tela com alta densidade de pixels, comum em notebooks e
+                  monitores 4K. Pode exigir escala para textos e controles não
+                  ficarem pequenos.
+                </dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="term-group" id="hardware" data-group>
+            <div class="term-group-heading">
+              <span>05</span>
+              <div>
+                <p class="section-kicker">Do botão de ligar ao desktop</p>
+                <h2>Hardware e inicialização</h2>
+              </div>
+            </div>
+            <dl class="term-grid">
+              <div
+                class="term-card"
+                data-term="driver controlador hardware dispositivo nvidia wifi"
+              >
+                <dt>Driver</dt>
+                <dd>
+                  Software que permite ao sistema conversar com um componente de
+                  hardware, como GPU, Wi-Fi, impressora ou touchpad.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="firmware hardware dispositivo codigo"
+              >
+                <dt>Firmware</dt>
+                <dd>
+                  Código de baixo nível usado por um dispositivo. Algumas placas
+                  precisam que o sistema carregue um arquivo de firmware para
+                  funcionar corretamente.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="BIOS UEFI inicializacao placa mae boot"
+              >
+                <dt>BIOS / UEFI</dt>
+                <dd>
+                  Firmware da placa-mãe que prepara o hardware e inicia o
+                  sistema operacional. UEFI é o padrão moderno.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="boot inicializacao ligar sistema"
+              >
+                <dt>Boot</dt>
+                <dd>
+                  Processo de inicialização, desde ligar o computador até o
+                  sistema ficar disponível para uso.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="bootloader carregador grub systemd boot inicializacao"
+              >
+                <dt>Bootloader</dt>
+                <dd>
+                  Programa que encontra e inicia o sistema operacional. Também
+                  pode oferecer um menu para escolher entre Linux e Windows.
+                  GRUB é um exemplo.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="dual boot dois sistemas windows linux"
+              >
+                <dt>Dual boot</dt>
+                <dd>
+                  Configuração com dois sistemas instalados no mesmo computador.
+                  A escolha é feita ao ligar; exige cuidado com partições e
+                  backup.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="maquina virtual VM virtualizacao virtualbox qemu"
+              >
+                <dt>Máquina virtual</dt>
+                <dd>
+                  Computador simulado dentro de outro sistema. É útil para
+                  testar uma distribuição sem alterar o disco, embora tenha
+                  desempenho inferior ao uso direto.
+                </dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="term-group" id="formatos" data-group>
+            <div class="term-group-heading">
+              <span>06</span>
+              <div>
+                <p class="section-kicker">Armazenamento</p>
+                <h2>Discos e arquivos</h2>
+              </div>
+            </div>
+            <dl class="term-grid">
+              <div
+                class="term-card"
+                data-term="sistema arquivos filesystem ext4 btrfs ntfs"
+              >
+                <dt>Sistema de arquivos</dt>
+                <dd>
+                  Formato usado para organizar dados em uma partição. ext4 e
+                  Btrfs são comuns no Linux; NTFS é comum no Windows.
+                </dd>
+              </div>
+              <div class="term-card" data-term="particao disco volume dividir">
+                <dt>Partição</dt>
+                <dd>
+                  Divisão lógica de um disco. Cada partição pode guardar um
+                  sistema de arquivos ou cumprir uma função específica.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="montar montagem mount disco acessar"
+              >
+                <dt>Montar</dt>
+                <dd>
+                  Tornar um sistema de arquivos acessível em determinado
+                  diretório. Pendrives normalmente são montados automaticamente.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="home diretorio pessoal usuario arquivos"
+              >
+                <dt><code>/home</code></dt>
+                <dd>
+                  Local onde ficam os diretórios pessoais dos usuários,
+                  incluindo documentos e muitas configurações de aplicativos.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="swap troca memoria ram hibernacao"
+              >
+                <dt>Swap</dt>
+                <dd>
+                  Espaço em disco usado como apoio à memória RAM e, em algumas
+                  configurações, para hibernação. É mais lento que RAM.
+                </dd>
+              </div>
+              <div
+                class="term-card"
+                data-term="snapshot instantaneo sistema restaurar btrfs"
+              >
+                <dt>Snapshot</dt>
+                <dd>
+                  Registro do estado de um sistema de arquivos em certo momento.
+                  Pode ajudar a desfazer alterações, mas não substitui um backup
+                  externo.
+                </dd>
+              </div>
+            </dl>
+          </section>
+
+          <div class="no-term-results" id="no-term-results" hidden>
+            <span aria-hidden="true">?</span>
+            <h2>Nenhum termo encontrado</h2>
+            <p>
+              Tente uma palavra diferente ou consulte as categorias ao lado.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section class="glossary-note">
+        <p class="section-kicker">Continue pesquisando</p>
+        <h2>Encontrou outro termo técnico?</h2>
+        <p>
+          Consulte documentação e comunidades reconhecidas. Comece pela fonte
+          mais próxima da sua distribuição e compare respostas quando o assunto
+          envolver instalação, drivers, partições ou comandos administrativos.
+        </p>
+        <div class="reference-grid">
+          <a href="https://wiki.archlinux.org/" target="_blank" rel="noopener">
+            <span>Documentação · inglês</span>
+            <strong>Arch Wiki</strong>
+            <p>
+              Referência técnica extensa, útil mesmo fora do Arch. Adapte
+              comandos e nomes de pacotes à sua distribuição.
+            </p>
+          </a>
+          <a href="https://askubuntu.com/" target="_blank" rel="noopener">
+            <span>Perguntas e respostas · inglês</span>
+            <strong>Ask Ubuntu</strong>
+            <p>
+              Soluções para Ubuntu e derivados. Confira a versão mencionada e a
+              data da resposta.
+            </p>
+          </a>
+          <a
+            href="https://plus.diolinux.com.br/"
+            target="_blank"
+            rel="noopener"
+          >
+            <span>Fórum · português</span>
+            <strong>Diolinux Plus</strong>
+            <p>
+              Comunidade brasileira sobre Linux, software livre, hardware e
+              tecnologia em geral.
+            </p>
+          </a>
+          <a
+            href="https://www.reddit.com/r/linuxbrasil/"
+            target="_blank"
+            rel="noopener"
+          >
+            <span>Comunidade · português</span>
+            <strong>r/linuxbrasil</strong>
+            <p>
+              Discussões, experiências e materiais da comunidade brasileira.
+              Consulte as regras antes de publicar.
+            </p>
+          </a>
+          <a
+            href="https://www.vivaolinux.com.br/perguntas/"
+            target="_blank"
+            rel="noopener"
+          >
+            <span>Fórum · português</span>
+            <strong>Viva o Linux</strong>
+            <p>
+              Acervo brasileiro de perguntas, artigos, dicas e discussões
+              acumuladas ao longo dos anos.
+            </p>
+          </a>
+          <a
+            href="https://discussion.fedoraproject.org/"
+            target="_blank"
+            rel="noopener"
+          >
+            <span>Fórum oficial · multilíngue</span>
+            <strong>Fedora Discussion</strong>
+            <p>
+              Discussões e suporte da comunidade do Fedora Project,
+              especialmente úteis para usuários do Fedora.
+            </p>
+          </a>
+          <a
+            href="https://www.redhat.com/en/blog"
+            target="_blank"
+            rel="noopener"
+          >
+            <span>Blog técnico · inglês</span>
+            <strong>Red Hat Blog</strong>
+            <p>
+              Artigos sobre Linux empresarial, containers, segurança,
+              administração e tecnologias abertas.
+            </p>
+          </a>
+          <a
+            href="https://docs.fedoraproject.org/"
+            target="_blank"
+            rel="noopener"
+          >
+            <span>Documentação oficial · multilíngue</span>
+            <strong>Fedora Docs</strong>
+            <p>
+              Guias oficiais de instalação, uso e administração do Fedora Linux.
+            </p>
+          </a>
+        </div>
+        <aside class="research-warning">
+          <strong>Antes de copiar um comando</strong>
+          <p>
+            Confira se a orientação serve para sua distribuição e versão,
+            entenda o que o comando altera e mantenha backup dos dados
+            importantes. Respostas antigas podem não valer para sistemas atuais.
+          </p>
+        </aside>
+        <a class="button button-primary" href="teste.html">Fazer o teste →</a>
+      </section>
+    </main>
+
+    <footer class="simple-footer">
+      <div class="simple-footer-info">
+        <a class="simple-footer-brand" href="index.html">Seu próximo Linux</a>
+        <p class="footer-notice">
+          Projeto independente, sem vínculo com as distribuições citadas. As
+          respostas são processadas e armazenadas localmente no navegador.
+        </p>
+      </div>
+      <nav aria-label="Links do rodapé">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="glossario.html">Glossário</a>
+        <a href="guia.html">Distribuições</a>
+        <a href="seguranca.html">Segurança</a>
+        <a href="teste.html">Fazer o teste</a>
+      </nav>
+    </footer>
+
+    <script type="module" src="js/glossary.js"></script>
+  </body>
+</html>
