@@ -1,0 +1,693 @@
+{
+  "schema_version": "1.0.0",
+  "scale": {
+    "0": "Discordo totalmente",
+    "1": "Discordo",
+    "2": "Discordo parcialmente",
+    "3": "Concordo parcialmente",
+    "4": "Concordo",
+    "5": "Concordo totalmente",
+    "unknown": "Não sei responder"
+  },
+  "sections": [
+    {
+      "id": "updates",
+      "title": "Atualizações e previsibilidade",
+      "question_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "maintenance",
+      "title": "Manutenção e solução de problemas",
+      "question_ids": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "control",
+      "title": "Controle e decisões do sistema",
+      "question_ids": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "id": "ease",
+      "title": "Facilidade inicial",
+      "question_ids": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "id": "learning",
+      "title": "Aprendizado e envolvimento",
+      "question_ids": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "id": "community",
+      "title": "Comunidade e filosofia",
+      "question_ids": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ]
+    },
+    {
+      "id": "desktop_flow",
+      "title": "Interface e fluxo de trabalho",
+      "question_ids": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ]
+    },
+    {
+      "id": "appearance",
+      "title": "Personalização e aparência",
+      "question_ids": [
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "id": "windows",
+      "title": "Desempenho e janelas",
+      "question_ids": [
+        47,
+        48,
+        49,
+        50
+      ]
+    }
+  ],
+  "likert_questions": [
+    {
+      "id": 1,
+      "type": "likert",
+      "text": "Quero que o sistema continue funcionando praticamente da mesma forma por bastante tempo.",
+      "weights": {
+        "stability": 1.0,
+        "low_maintenance": 0.4,
+        "freshness": -0.3
+      }
+    },
+    {
+      "id": 2,
+      "type": "likert",
+      "text": "Prefiro receber atualizações mais testadas, mesmo que elas demorem para chegar.",
+      "weights": {
+        "stability": 1.0,
+        "freshness": -0.5
+      }
+    },
+    {
+      "id": 3,
+      "type": "likert",
+      "text": "Aceito usar versões mais antigas dos programas se isso reduzir a possibilidade de problemas.",
+      "weights": {
+        "stability": 0.9,
+        "freshness": -0.7
+      }
+    },
+    {
+      "id": 4,
+      "type": "likert",
+      "text": "Quero receber rapidamente versões novas dos programas que uso.",
+      "weights": {
+        "freshness": 1.0,
+        "stability": -0.4
+      }
+    },
+    {
+      "id": 5,
+      "type": "likert",
+      "text": "Ter kernel, drivers e recursos recentes é importante para mim.",
+      "weights": {
+        "freshness": 1.0
+      }
+    },
+    {
+      "id": 6,
+      "type": "likert",
+      "text": "Aceito pequenos riscos em troca de software mais atualizado.",
+      "weights": {
+        "freshness": 0.8,
+        "technical_autonomy": 0.3,
+        "low_maintenance": -0.5
+      }
+    },
+    {
+      "id": 7,
+      "type": "likert",
+      "text": "Quero que as atualizações funcionem sem exigir minha atenção.",
+      "weights": {
+        "low_maintenance": 1.0,
+        "technical_autonomy": -0.3
+      }
+    },
+    {
+      "id": 8,
+      "type": "likert",
+      "text": "Estou disposto a pesquisar soluções quando algo deixa de funcionar.",
+      "weights": {
+        "technical_autonomy": 1.0,
+        "learning_interest": 0.3
+      }
+    },
+    {
+      "id": 9,
+      "type": "likert",
+      "text": "Não me incomodo em executar comandos no terminal para corrigir problemas.",
+      "weights": {
+        "technical_autonomy": 0.9,
+        "graphical_tools": -0.4
+      }
+    },
+    {
+      "id": 10,
+      "type": "likert",
+      "text": "Aceito realizar pequenos ajustes manuais ocasionalmente.",
+      "weights": {
+        "technical_autonomy": 0.7,
+        "low_maintenance": -0.4
+      }
+    },
+    {
+      "id": 11,
+      "type": "likert",
+      "text": "Resolver problemas e aprender com eles faz parte da diversão de usar o computador.",
+      "weights": {
+        "learning_interest": 0.7,
+        "technical_autonomy": 0.8,
+        "low_maintenance": -0.7
+      }
+    },
+    {
+      "id": 12,
+      "type": "likert",
+      "text": "Quero ter uma forma simples de desfazer uma atualização problemática.",
+      "weights": {
+        "stability": 0.5,
+        "low_maintenance": 0.8
+      }
+    },
+    {
+      "id": 13,
+      "type": "likert",
+      "text": "Quero escolher quais componentes serão instalados no sistema.",
+      "weights": {
+        "system_control": 1.0,
+        "ready_to_use": -0.3
+      }
+    },
+    {
+      "id": 14,
+      "type": "likert",
+      "text": "Prefiro que a distribuição já venha configurada com decisões sensatas.",
+      "weights": {
+        "ready_to_use": 1.0,
+        "system_control": -0.4
+      }
+    },
+    {
+      "id": 15,
+      "type": "likert",
+      "text": "Quero instalar apenas o necessário, evitando programas que não utilizo.",
+      "weights": {
+        "system_control": 0.8,
+        "ready_to_use": -0.3
+      }
+    },
+    {
+      "id": 16,
+      "type": "likert",
+      "text": "Gosto de ter muitas opções de configuração.",
+      "weights": {
+        "system_control": 0.9,
+        "desktop_customization": 0.3
+      }
+    },
+    {
+      "id": 17,
+      "type": "likert",
+      "text": "Prefiro uma experiência integrada, mesmo que isso limite algumas possibilidades de personalização.",
+      "weights": {
+        "ready_to_use": 0.6,
+        "system_control": -0.6,
+        "visual_polish": 0.2
+      }
+    },
+    {
+      "id": 18,
+      "type": "likert",
+      "text": "Quero poder substituir componentes do sistema sem enfrentar muitas restrições.",
+      "weights": {
+        "system_control": 0.9,
+        "technical_autonomy": 0.4
+      }
+    },
+    {
+      "id": 19,
+      "type": "likert",
+      "text": "Quero instalar o sistema e começar a usá-lo imediatamente.",
+      "weights": {
+        "ready_to_use": 1.0,
+        "low_maintenance": 0.4
+      }
+    },
+    {
+      "id": 20,
+      "type": "likert",
+      "text": "Prefiro que drivers, codecs e programas básicos sejam fáceis de obter.",
+      "weights": {
+        "ready_to_use": 0.8,
+        "proprietary_tolerance": 0.4
+      }
+    },
+    {
+      "id": 21,
+      "type": "likert",
+      "text": "Quero realizar a maioria das tarefas comuns sem utilizar o terminal.",
+      "weights": {
+        "graphical_tools": 1.0,
+        "technical_autonomy": -0.4
+      }
+    },
+    {
+      "id": 22,
+      "type": "likert",
+      "text": "Estou disposto a seguir um guia de instalação detalhado.",
+      "weights": {
+        "technical_autonomy": 0.8,
+        "learning_interest": 0.5,
+        "ready_to_use": -0.4
+      }
+    },
+    {
+      "id": 23,
+      "type": "likert",
+      "text": "Quero que impressoras, Bluetooth e outros dispositivos funcionem com pouca configuração.",
+      "weights": {
+        "ready_to_use": 0.7,
+        "low_maintenance": 0.5
+      }
+    },
+    {
+      "id": 24,
+      "type": "likert",
+      "text": "Quero ferramentas gráficas para administrar e configurar o sistema.",
+      "weights": {
+        "graphical_tools": 1.0,
+        "ready_to_use": 0.4
+      }
+    },
+    {
+      "id": 25,
+      "type": "likert",
+      "text": "Quero aprender mais sobre como o Linux funciona.",
+      "weights": {
+        "learning_interest": 1.0
+      }
+    },
+    {
+      "id": 26,
+      "type": "likert",
+      "text": "Vejo a instalação e a configuração do sistema como parte do hobby.",
+      "weights": {
+        "learning_interest": 0.9,
+        "technical_autonomy": 0.5,
+        "ready_to_use": -0.3
+      }
+    },
+    {
+      "id": 27,
+      "type": "likert",
+      "text": "Meu objetivo principal é usar meus programas, e não estudar o sistema operacional.",
+      "weights": {
+        "ready_to_use": 0.5,
+        "learning_interest": -0.8
+      }
+    },
+    {
+      "id": 28,
+      "type": "likert",
+      "text": "Tenho interesse em aprender comandos e ferramentas do terminal.",
+      "weights": {
+        "learning_interest": 0.8,
+        "technical_autonomy": 0.6
+      }
+    },
+    {
+      "id": 29,
+      "type": "likert",
+      "text": "Gosto de testar configurações diferentes e comparar os resultados.",
+      "weights": {
+        "learning_interest": 0.8,
+        "system_control": 0.5
+      }
+    },
+    {
+      "id": 30,
+      "type": "likert",
+      "text": "Não quero gastar meu tempo livre fazendo manutenção no sistema.",
+      "weights": {
+        "low_maintenance": 1.0,
+        "technical_autonomy": -0.5,
+        "learning_interest": -0.4
+      }
+    },
+    {
+      "id": 31,
+      "type": "likert",
+      "text": "Quero encontrar facilmente tutoriais e respostas para meus problemas.",
+      "weights": {
+        "community_support": 1.0,
+        "ready_to_use": 0.2
+      }
+    },
+    {
+      "id": 32,
+      "type": "likert",
+      "text": "Documentação oficial bem escrita é muito importante para mim.",
+      "weights": {
+        "community_support": 0.8,
+        "technical_autonomy": 0.2
+      }
+    },
+    {
+      "id": 33,
+      "type": "likert",
+      "text": "Prefiro uma distribuição com uma comunidade grande.",
+      "weights": {
+        "community_support": 0.8
+      }
+    },
+    {
+      "id": 34,
+      "type": "likert",
+      "text": "Aceito utilizar uma distribuição menor se ela tiver uma comunidade participativa.",
+      "weights": {
+        "technical_autonomy": 0.4,
+        "community_support": -0.2
+      }
+    },
+    {
+      "id": 35,
+      "type": "likert",
+      "text": "Não me importo em usar drivers ou programas proprietários quando necessário.",
+      "weights": {
+        "proprietary_tolerance": 1.0
+      }
+    },
+    {
+      "id": 36,
+      "type": "likert",
+      "text": "Prefiro tecnologias amplamente adotadas a soluções exclusivas de uma única distribuição.",
+      "weights": {
+        "community_support": 0.4,
+        "system_control": -0.2
+      }
+    },
+    {
+      "id": 37,
+      "type": "likert",
+      "text": "Quero uma interface tradicional, com menu de aplicativos e barra de tarefas.",
+      "weights": {
+        "traditional_desktop": 1.0,
+        "workflow_novelty": -0.4
+      }
+    },
+    {
+      "id": 38,
+      "type": "likert",
+      "text": "Aceito aprender uma maneira diferente de organizar janelas e aplicativos.",
+      "weights": {
+        "workflow_novelty": 1.0,
+        "traditional_desktop": -0.4
+      }
+    },
+    {
+      "id": 39,
+      "type": "likert",
+      "text": "Gosto de visualizar todas as janelas abertas em uma única tela.",
+      "weights": {
+        "workflow_novelty": 0.8
+      }
+    },
+    {
+      "id": 40,
+      "type": "likert",
+      "text": "Quero botões visíveis para minimizar, maximizar e fechar janelas.",
+      "weights": {
+        "traditional_desktop": 0.7
+      }
+    },
+    {
+      "id": 41,
+      "type": "likert",
+      "text": "Prefiro pesquisar pelo nome dos aplicativos em vez de navegar por menus.",
+      "weights": {
+        "workflow_novelty": 0.7,
+        "traditional_desktop": -0.3
+      }
+    },
+    {
+      "id": 42,
+      "type": "likert",
+      "text": "Gosto de trabalhar com várias áreas de trabalho virtuais.",
+      "weights": {
+        "workflow_novelty": 0.5,
+        "keyboard_workflow": 0.3
+      }
+    },
+    {
+      "id": 43,
+      "type": "likert",
+      "text": "Quero alterar facilmente painéis, menus, temas, ícones e atalhos.",
+      "weights": {
+        "desktop_customization": 1.0,
+        "system_control": 0.3
+      }
+    },
+    {
+      "id": 44,
+      "type": "likert",
+      "text": "Prefiro que a interface tenha poucas opções para evitar configurações confusas.",
+      "weights": {
+        "desktop_customization": -1.0,
+        "ready_to_use": 0.3
+      }
+    },
+    {
+      "id": 45,
+      "type": "likert",
+      "text": "Quero que o sistema tenha uma aparência agradável sem precisar ser personalizado.",
+      "weights": {
+        "visual_polish": 0.7,
+        "ready_to_use": 0.5,
+        "desktop_customization": -0.2
+      }
+    },
+    {
+      "id": 46,
+      "type": "likert",
+      "text": "Animações, efeitos e uma aparência moderna são importantes para mim.",
+      "weights": {
+        "visual_polish": 1.0,
+        "resource_efficiency": -0.4
+      }
+    },
+    {
+      "id": 47,
+      "type": "likert",
+      "text": "Quero que a interface consuma o mínimo possível de memória e processamento.",
+      "weights": {
+        "resource_efficiency": 1.0,
+        "visual_polish": -0.3
+      }
+    },
+    {
+      "id": 48,
+      "type": "likert",
+      "text": "Uso muitos programas ao mesmo tempo e quero boas ferramentas para organizar janelas.",
+      "weights": {
+        "window_automation": 0.5,
+        "desktop_customization": 0.3
+      }
+    },
+    {
+      "id": 49,
+      "type": "likert",
+      "text": "Tenho interesse em usar principalmente atalhos de teclado para controlar o computador.",
+      "weights": {
+        "keyboard_workflow": 1.0
+      }
+    },
+    {
+      "id": 50,
+      "type": "likert",
+      "text": "Quero que as janelas possam ser organizadas automaticamente na tela.",
+      "weights": {
+        "window_automation": 1.0,
+        "keyboard_workflow": 0.3
+      }
+    }
+  ],
+  "hardware_questions": [
+    {
+      "id": "hw_01",
+      "type": "yes_no_unknown",
+      "text": "Seu computador tem 8 GB de memória RAM ou menos?",
+      "on_yes": {
+        "needs": {
+          "low_resources": 1.0
+        }
+      },
+      "on_unknown": {
+        "alerts": [
+          "Confirme a quantidade de memória RAM para melhorar a recomendação."
+        ]
+      }
+    },
+    {
+      "id": "hw_02",
+      "type": "yes_no_unknown",
+      "text": "Seu computador utiliza apenas HD mecânico, sem SSD?",
+      "on_yes": {
+        "needs": {
+          "low_resources": 0.8
+        }
+      },
+      "on_unknown": {
+        "alerts": [
+          "O tipo de armazenamento pode influenciar a experiência em sistemas mais pesados."
+        ]
+      }
+    },
+    {
+      "id": "hw_03",
+      "type": "yes_no_unknown",
+      "text": "Seu computador foi lançado ou montado nos últimos três anos?",
+      "on_yes": {
+        "needs": {
+          "recent_hardware": 1.0
+        }
+      }
+    },
+    {
+      "id": "hw_04",
+      "type": "yes_no_unknown",
+      "text": "Seu computador possui placa de vídeo Nvidia?",
+      "on_yes": {
+        "needs": {
+          "nvidia_ease": 1.0
+        }
+      },
+      "on_unknown": {
+        "alerts": [
+          "Confirme o fabricante da placa de vídeo antes de instalar."
+        ]
+      }
+    },
+    {
+      "id": "hw_05",
+      "type": "yes_no_unknown",
+      "text": "Seu notebook possui duas placas de vídeo, uma integrada e outra dedicada?",
+      "on_yes": {
+        "needs": {
+          "hybrid_graphics": 1.0
+        }
+      }
+    },
+    {
+      "id": "hw_06",
+      "type": "yes_no_unknown",
+      "text": "Você utiliza dois ou mais monitores, tela 4K ou tela sensível ao toque?",
+      "on_yes": {
+        "needs": {
+          "advanced_display": 1.0
+        }
+      }
+    },
+    {
+      "id": "hw_07",
+      "type": "yes_no_unknown",
+      "text": "Você depende de Wi-Fi, Bluetooth, impressora, scanner ou adaptadores USB que precisam funcionar com pouca configuração?",
+      "on_yes": {
+        "needs": {
+          "peripheral_ease": 1.0
+        }
+      }
+    },
+    {
+      "id": "hw_08",
+      "type": "yes_no_unknown",
+      "text": "Jogos são uma das principais finalidades deste computador?",
+      "on_yes": {
+        "needs": {
+          "gaming": 1.0
+        }
+      }
+    },
+    {
+      "id": "hw_09",
+      "type": "yes_no_unknown",
+      "text": "Você pretende usar máquinas virtuais, contêineres, edição de vídeo ou outras tarefas pesadas?",
+      "on_yes": {
+        "needs": {
+          "workstation": 1.0
+        }
+      }
+    },
+    {
+      "id": "hw_10",
+      "type": "yes_no_unknown",
+      "text": "Você precisa executar algum programa ou utilizar algum equipamento cuja compatibilidade com Linux seja indispensável?",
+      "on_yes": {
+        "follow_up": {
+          "id": "critical_compatibility_details",
+          "type": "text",
+          "label": "Qual programa ou equipamento precisa funcionar?"
+        },
+        "alerts": [
+          "Verifique a compatibilidade do programa ou equipamento antes de substituir o sistema atual."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,845 @@
+{
+  "schema_version": "1.0.0",
+  "hardware_dimensions": [
+    {
+      "id": "low_resources",
+      "label": "Adequação a hardware limitado"
+    },
+    {
+      "id": "recent_hardware",
+      "label": "Suporte a hardware recente"
+    },
+    {
+      "id": "nvidia_ease",
+      "label": "Facilidade com Nvidia"
+    },
+    {
+      "id": "hybrid_graphics",
+      "label": "Facilidade com gráficos híbridos"
+    },
+    {
+      "id": "advanced_display",
+      "label": "Monitores múltiplos, HiDPI e toque"
+    },
+    {
+      "id": "peripheral_ease",
+      "label": "Facilidade com periféricos"
+    },
+    {
+      "id": "gaming",
+      "label": "Adequação para jogos"
+    },
+    {
+      "id": "workstation",
+      "label": "Adequação para desenvolvimento e cargas pesadas"
+    }
+  ],
+  "hardware_match": {
+    "formula": "hardware_score = weighted_mean(distro.hardware[need] * need_weight)",
+    "blend": "final_score = preference_score * 0.85 + hardware_score * 0.15",
+    "no_needs_behavior": "Se nenhuma necessidade de hardware for marcada, o resultado usa apenas preference_score."
+  },
+  "distros": [
+    {
+      "id": "linux-mint-cinnamon",
+      "name": "Linux Mint Cinnamon",
+      "distribution": "Linux Mint",
+      "desktop": "Cinnamon",
+      "family": "ubuntu",
+      "release_model": "fixed_lts",
+      "complexity_level": 1,
+      "official_url": "https://linuxmint.com/download.php",
+      "profile": {
+        "stability": 88,
+        "freshness": 45,
+        "low_maintenance": 90,
+        "technical_autonomy": 35,
+        "system_control": 45,
+        "ready_to_use": 95,
+        "graphical_tools": 90,
+        "learning_interest": 40,
+        "community_support": 90,
+        "proprietary_tolerance": 85,
+        "traditional_desktop": 95,
+        "workflow_novelty": 25,
+        "desktop_customization": 70,
+        "visual_polish": 80,
+        "resource_efficiency": 65,
+        "keyboard_workflow": 45,
+        "window_automation": 30
+      },
+      "hardware": {
+        "low_resources": 65,
+        "recent_hardware": 55,
+        "nvidia_ease": 80,
+        "hybrid_graphics": 65,
+        "advanced_display": 65,
+        "peripheral_ease": 85,
+        "gaming": 75,
+        "workstation": 70
+      },
+      "strengths": [
+        "Experiência familiar",
+        "Ferramentas gráficas",
+        "Baixa manutenção"
+      ],
+      "tradeoffs": [
+        "Pacotes de base mais conservadores",
+        "Menos indicado para hardware recém-lançado"
+      ]
+    },
+    {
+      "id": "linux-mint-xfce",
+      "name": "Linux Mint Xfce",
+      "distribution": "Linux Mint",
+      "desktop": "Xfce",
+      "family": "ubuntu",
+      "release_model": "fixed_lts",
+      "complexity_level": 1,
+      "official_url": "https://linuxmint.com/download.php",
+      "profile": {
+        "stability": 90,
+        "freshness": 40,
+        "low_maintenance": 92,
+        "technical_autonomy": 35,
+        "system_control": 50,
+        "ready_to_use": 92,
+        "graphical_tools": 88,
+        "learning_interest": 40,
+        "community_support": 90,
+        "proprietary_tolerance": 85,
+        "traditional_desktop": 95,
+        "workflow_novelty": 20,
+        "desktop_customization": 75,
+        "visual_polish": 60,
+        "resource_efficiency": 92,
+        "keyboard_workflow": 45,
+        "window_automation": 25
+      },
+      "hardware": {
+        "low_resources": 95,
+        "recent_hardware": 50,
+        "nvidia_ease": 80,
+        "hybrid_graphics": 60,
+        "advanced_display": 55,
+        "peripheral_ease": 85,
+        "gaming": 65,
+        "workstation": 65
+      },
+      "strengths": ["Muito leve", "Interface tradicional", "Baixa manutenção"],
+      "tradeoffs": ["Visual mais simples", "Base conservadora"]
+    },
+    {
+      "id": "zorin-os-core",
+      "name": "Zorin OS Core",
+      "distribution": "Zorin OS",
+      "desktop": "Zorin Desktop",
+      "family": "ubuntu",
+      "release_model": "fixed_lts",
+      "complexity_level": 1,
+      "official_url": "https://zorin.com/os/",
+      "profile": {
+        "stability": 85,
+        "freshness": 45,
+        "low_maintenance": 90,
+        "technical_autonomy": 30,
+        "system_control": 40,
+        "ready_to_use": 97,
+        "graphical_tools": 95,
+        "learning_interest": 35,
+        "community_support": 75,
+        "proprietary_tolerance": 90,
+        "traditional_desktop": 92,
+        "workflow_novelty": 35,
+        "desktop_customization": 55,
+        "visual_polish": 92,
+        "resource_efficiency": 58,
+        "keyboard_workflow": 45,
+        "window_automation": 35
+      },
+      "hardware": {
+        "low_resources": 55,
+        "recent_hardware": 60,
+        "nvidia_ease": 90,
+        "hybrid_graphics": 70,
+        "advanced_display": 70,
+        "peripheral_ease": 85,
+        "gaming": 80,
+        "workstation": 70
+      },
+      "strengths": [
+        "Transição amigável",
+        "Visual polido",
+        "Drivers facilitados"
+      ],
+      "tradeoffs": [
+        "Menos personalizável",
+        "Comunidade menor que Ubuntu e Mint"
+      ]
+    },
+    {
+      "id": "ubuntu-gnome",
+      "name": "Ubuntu com GNOME",
+      "distribution": "Ubuntu",
+      "desktop": "GNOME",
+      "family": "ubuntu",
+      "release_model": "fixed",
+      "complexity_level": 1,
+      "official_url": "https://ubuntu.com/download/desktop",
+      "profile": {
+        "stability": 80,
+        "freshness": 60,
+        "low_maintenance": 85,
+        "technical_autonomy": 35,
+        "system_control": 35,
+        "ready_to_use": 95,
+        "graphical_tools": 90,
+        "learning_interest": 35,
+        "community_support": 100,
+        "proprietary_tolerance": 90,
+        "traditional_desktop": 35,
+        "workflow_novelty": 82,
+        "desktop_customization": 40,
+        "visual_polish": 88,
+        "resource_efficiency": 50,
+        "keyboard_workflow": 65,
+        "window_automation": 40
+      },
+      "hardware": {
+        "low_resources": 45,
+        "recent_hardware": 70,
+        "nvidia_ease": 85,
+        "hybrid_graphics": 80,
+        "advanced_display": 80,
+        "peripheral_ease": 90,
+        "gaming": 80,
+        "workstation": 85
+      },
+      "strengths": [
+        "Comunidade enorme",
+        "Boa integração",
+        "Ampla documentação"
+      ],
+      "tradeoffs": [
+        "Fluxo do GNOME pode exigir adaptação",
+        "Personalização profunda depende de extensões"
+      ]
+    },
+    {
+      "id": "kubuntu-kde",
+      "name": "Kubuntu",
+      "distribution": "Kubuntu",
+      "desktop": "KDE Plasma",
+      "family": "ubuntu",
+      "release_model": "fixed",
+      "complexity_level": 1,
+      "official_url": "https://kubuntu.org/getkubuntu/",
+      "profile": {
+        "stability": 80,
+        "freshness": 60,
+        "low_maintenance": 82,
+        "technical_autonomy": 40,
+        "system_control": 55,
+        "ready_to_use": 92,
+        "graphical_tools": 92,
+        "learning_interest": 40,
+        "community_support": 95,
+        "proprietary_tolerance": 90,
+        "traditional_desktop": 94,
+        "workflow_novelty": 35,
+        "desktop_customization": 98,
+        "visual_polish": 92,
+        "resource_efficiency": 62,
+        "keyboard_workflow": 58,
+        "window_automation": 50
+      },
+      "hardware": {
+        "low_resources": 60,
+        "recent_hardware": 70,
+        "nvidia_ease": 85,
+        "hybrid_graphics": 75,
+        "advanced_display": 88,
+        "peripheral_ease": 90,
+        "gaming": 82,
+        "workstation": 85
+      },
+      "strengths": [
+        "KDE Plasma acessível",
+        "Grande ecossistema",
+        "Muitas ferramentas gráficas"
+      ],
+      "tradeoffs": [
+        "Mistura decisões do Ubuntu e do KDE Plasma",
+        "Pode trazer muitos aplicativos por padrão"
+      ]
+    },
+    {
+      "id": "xubuntu-xfce",
+      "name": "Xubuntu",
+      "distribution": "Xubuntu",
+      "desktop": "Xfce",
+      "family": "ubuntu",
+      "release_model": "fixed",
+      "complexity_level": 1,
+      "official_url": "https://xubuntu.org/download/",
+      "profile": {
+        "stability": 82,
+        "freshness": 55,
+        "low_maintenance": 88,
+        "technical_autonomy": 38,
+        "system_control": 52,
+        "ready_to_use": 90,
+        "graphical_tools": 86,
+        "learning_interest": 40,
+        "community_support": 92,
+        "proprietary_tolerance": 90,
+        "traditional_desktop": 93,
+        "workflow_novelty": 25,
+        "desktop_customization": 75,
+        "visual_polish": 65,
+        "resource_efficiency": 92,
+        "keyboard_workflow": 48,
+        "window_automation": 25
+      },
+      "hardware": {
+        "low_resources": 95,
+        "recent_hardware": 65,
+        "nvidia_ease": 85,
+        "hybrid_graphics": 70,
+        "advanced_display": 62,
+        "peripheral_ease": 88,
+        "gaming": 70,
+        "workstation": 72
+      },
+      "strengths": ["Leve", "Ecossistema Ubuntu", "Interface tradicional"],
+      "tradeoffs": [
+        "Menos recursos visuais",
+        "Organização de janelas mais básica"
+      ]
+    },
+    {
+      "id": "lubuntu-lxqt",
+      "name": "Lubuntu",
+      "distribution": "Lubuntu",
+      "desktop": "LXQt",
+      "family": "ubuntu",
+      "release_model": "fixed",
+      "complexity_level": 1,
+      "official_url": "https://lubuntu.me/downloads/",
+      "profile": {
+        "stability": 82,
+        "freshness": 55,
+        "low_maintenance": 88,
+        "technical_autonomy": 38,
+        "system_control": 50,
+        "ready_to_use": 90,
+        "graphical_tools": 84,
+        "learning_interest": 38,
+        "community_support": 90,
+        "proprietary_tolerance": 90,
+        "traditional_desktop": 90,
+        "workflow_novelty": 25,
+        "desktop_customization": 68,
+        "visual_polish": 62,
+        "resource_efficiency": 98,
+        "keyboard_workflow": 48,
+        "window_automation": 22
+      },
+      "hardware": {
+        "low_resources": 100,
+        "recent_hardware": 62,
+        "nvidia_ease": 82,
+        "hybrid_graphics": 68,
+        "advanced_display": 58,
+        "peripheral_ease": 85,
+        "gaming": 65,
+        "workstation": 65
+      },
+      "strengths": ["Máxima leveza", "Instalação simples", "Base Ubuntu"],
+      "tradeoffs": [
+        "Interface mais básica",
+        "Menos ferramentas avançadas de desktop"
+      ]
+    },
+    {
+      "id": "fedora-workstation-gnome",
+      "name": "Fedora Workstation",
+      "distribution": "Fedora",
+      "desktop": "GNOME",
+      "family": "fedora",
+      "release_model": "fixed_frequent",
+      "complexity_level": 2,
+      "official_url": "https://fedoraproject.org/workstation/download",
+      "profile": {
+        "stability": 70,
+        "freshness": 88,
+        "low_maintenance": 70,
+        "technical_autonomy": 55,
+        "system_control": 50,
+        "ready_to_use": 80,
+        "graphical_tools": 82,
+        "learning_interest": 60,
+        "community_support": 85,
+        "proprietary_tolerance": 68,
+        "traditional_desktop": 25,
+        "workflow_novelty": 95,
+        "desktop_customization": 38,
+        "visual_polish": 92,
+        "resource_efficiency": 50,
+        "keyboard_workflow": 82,
+        "window_automation": 45
+      },
+      "hardware": {
+        "low_resources": 42,
+        "recent_hardware": 95,
+        "nvidia_ease": 68,
+        "hybrid_graphics": 78,
+        "advanced_display": 92,
+        "peripheral_ease": 82,
+        "gaming": 82,
+        "workstation": 95
+      },
+      "strengths": [
+        "Tecnologias recentes",
+        "GNOME bem integrado",
+        "Excelente para desenvolvimento"
+      ],
+      "tradeoffs": [
+        "Codecs e drivers podem exigir passos extras",
+        "Fluxo do GNOME é pouco tradicional"
+      ]
+    },
+    {
+      "id": "fedora-kde",
+      "name": "Fedora KDE Plasma Desktop",
+      "distribution": "Fedora",
+      "desktop": "KDE Plasma",
+      "family": "fedora",
+      "release_model": "fixed_frequent",
+      "complexity_level": 2,
+      "official_url": "https://fedoraproject.org/kde/download/",
+      "profile": {
+        "stability": 70,
+        "freshness": 88,
+        "low_maintenance": 68,
+        "technical_autonomy": 58,
+        "system_control": 65,
+        "ready_to_use": 82,
+        "graphical_tools": 88,
+        "learning_interest": 60,
+        "community_support": 85,
+        "proprietary_tolerance": 68,
+        "traditional_desktop": 94,
+        "workflow_novelty": 40,
+        "desktop_customization": 100,
+        "visual_polish": 94,
+        "resource_efficiency": 62,
+        "keyboard_workflow": 68,
+        "window_automation": 55
+      },
+      "hardware": {
+        "low_resources": 60,
+        "recent_hardware": 96,
+        "nvidia_ease": 68,
+        "hybrid_graphics": 78,
+        "advanced_display": 98,
+        "peripheral_ease": 82,
+        "gaming": 85,
+        "workstation": 95
+      },
+      "strengths": [
+        "KDE Plasma muito atual",
+        "Hardware recente",
+        "Personalização profunda"
+      ],
+      "tradeoffs": [
+        "Codecs e drivers podem exigir configuração",
+        "Atualizações frequentes"
+      ]
+    },
+    {
+      "id": "debian-gnome",
+      "name": "Debian com GNOME",
+      "distribution": "Debian",
+      "desktop": "GNOME",
+      "family": "debian",
+      "release_model": "fixed_stable",
+      "complexity_level": 2,
+      "official_url": "https://www.debian.org/distrib/",
+      "profile": {
+        "stability": 97,
+        "freshness": 35,
+        "low_maintenance": 88,
+        "technical_autonomy": 60,
+        "system_control": 70,
+        "ready_to_use": 65,
+        "graphical_tools": 70,
+        "learning_interest": 65,
+        "community_support": 90,
+        "proprietary_tolerance": 55,
+        "traditional_desktop": 25,
+        "workflow_novelty": 90,
+        "desktop_customization": 38,
+        "visual_polish": 80,
+        "resource_efficiency": 55,
+        "keyboard_workflow": 75,
+        "window_automation": 40
+      },
+      "hardware": {
+        "low_resources": 52,
+        "recent_hardware": 48,
+        "nvidia_ease": 55,
+        "hybrid_graphics": 55,
+        "advanced_display": 72,
+        "peripheral_ease": 72,
+        "gaming": 58,
+        "workstation": 88
+      },
+      "strengths": [
+        "Altíssima previsibilidade",
+        "Grande repositório",
+        "Projeto comunitário"
+      ],
+      "tradeoffs": [
+        "Software mais antigo",
+        "Alguns firmwares e codecs exigem atenção"
+      ]
+    },
+    {
+      "id": "debian-kde",
+      "name": "Debian com KDE Plasma",
+      "distribution": "Debian",
+      "desktop": "KDE Plasma",
+      "family": "debian",
+      "release_model": "fixed_stable",
+      "complexity_level": 2,
+      "official_url": "https://www.debian.org/distrib/",
+      "profile": {
+        "stability": 97,
+        "freshness": 35,
+        "low_maintenance": 85,
+        "technical_autonomy": 65,
+        "system_control": 75,
+        "ready_to_use": 65,
+        "graphical_tools": 78,
+        "learning_interest": 70,
+        "community_support": 90,
+        "proprietary_tolerance": 55,
+        "traditional_desktop": 94,
+        "workflow_novelty": 35,
+        "desktop_customization": 100,
+        "visual_polish": 84,
+        "resource_efficiency": 66,
+        "keyboard_workflow": 65,
+        "window_automation": 50
+      },
+      "hardware": {
+        "low_resources": 65,
+        "recent_hardware": 48,
+        "nvidia_ease": 55,
+        "hybrid_graphics": 55,
+        "advanced_display": 80,
+        "peripheral_ease": 72,
+        "gaming": 60,
+        "workstation": 88
+      },
+      "strengths": [
+        "Estabilidade com KDE Plasma",
+        "Muito controle",
+        "Longa vida útil"
+      ],
+      "tradeoffs": [
+        "KDE Plasma e drivers menos recentes",
+        "Instalação pede mais decisões"
+      ]
+    },
+    {
+      "id": "opensuse-leap-kde",
+      "name": "openSUSE Leap com KDE Plasma",
+      "distribution": "openSUSE Leap",
+      "desktop": "KDE Plasma",
+      "family": "suse",
+      "release_model": "fixed_stable",
+      "complexity_level": 2,
+      "official_url": "https://get.opensuse.org/leap/",
+      "profile": {
+        "stability": 90,
+        "freshness": 50,
+        "low_maintenance": 78,
+        "technical_autonomy": 60,
+        "system_control": 82,
+        "ready_to_use": 75,
+        "graphical_tools": 98,
+        "learning_interest": 60,
+        "community_support": 72,
+        "proprietary_tolerance": 65,
+        "traditional_desktop": 94,
+        "workflow_novelty": 40,
+        "desktop_customization": 100,
+        "visual_polish": 90,
+        "resource_efficiency": 62,
+        "keyboard_workflow": 62,
+        "window_automation": 52
+      },
+      "hardware": {
+        "low_resources": 58,
+        "recent_hardware": 62,
+        "nvidia_ease": 68,
+        "hybrid_graphics": 65,
+        "advanced_display": 88,
+        "peripheral_ease": 78,
+        "gaming": 68,
+        "workstation": 92
+      },
+      "strengths": [
+        "YaST e ferramentas gráficas",
+        "Snapshots",
+        "KDE Plasma bem integrado"
+      ],
+      "tradeoffs": [
+        "Ecossistema menor no Brasil",
+        "Mais opções durante a instalação"
+      ]
+    },
+    {
+      "id": "opensuse-tumbleweed-kde",
+      "name": "openSUSE Tumbleweed com KDE Plasma",
+      "distribution": "openSUSE Tumbleweed",
+      "desktop": "KDE Plasma",
+      "family": "suse",
+      "release_model": "rolling",
+      "complexity_level": 3,
+      "official_url": "https://get.opensuse.org/tumbleweed/",
+      "profile": {
+        "stability": 75,
+        "freshness": 98,
+        "low_maintenance": 60,
+        "technical_autonomy": 70,
+        "system_control": 85,
+        "ready_to_use": 75,
+        "graphical_tools": 98,
+        "learning_interest": 70,
+        "community_support": 72,
+        "proprietary_tolerance": 65,
+        "traditional_desktop": 94,
+        "workflow_novelty": 45,
+        "desktop_customization": 100,
+        "visual_polish": 92,
+        "resource_efficiency": 62,
+        "keyboard_workflow": 66,
+        "window_automation": 56
+      },
+      "hardware": {
+        "low_resources": 58,
+        "recent_hardware": 100,
+        "nvidia_ease": 65,
+        "hybrid_graphics": 70,
+        "advanced_display": 98,
+        "peripheral_ease": 82,
+        "gaming": 88,
+        "workstation": 96
+      },
+      "strengths": [
+        "Rolling release testada",
+        "Snapshots",
+        "KDE Plasma muito recente"
+      ],
+      "tradeoffs": [
+        "Atualizações volumosas",
+        "Exige atenção maior que uma distribuição LTS"
+      ]
+    },
+    {
+      "id": "pop-os-cosmic",
+      "name": "Pop!_OS com COSMIC",
+      "distribution": "Pop!_OS",
+      "desktop": "COSMIC",
+      "family": "ubuntu",
+      "release_model": "fixed_lts",
+      "complexity_level": 2,
+      "official_url": "https://system76.com/pop/download/",
+      "profile": {
+        "stability": 78,
+        "freshness": 75,
+        "low_maintenance": 80,
+        "technical_autonomy": 45,
+        "system_control": 55,
+        "ready_to_use": 92,
+        "graphical_tools": 90,
+        "learning_interest": 45,
+        "community_support": 75,
+        "proprietary_tolerance": 92,
+        "traditional_desktop": 65,
+        "workflow_novelty": 90,
+        "desktop_customization": 76,
+        "visual_polish": 95,
+        "resource_efficiency": 65,
+        "keyboard_workflow": 88,
+        "window_automation": 92
+      },
+      "hardware": {
+        "low_resources": 55,
+        "recent_hardware": 90,
+        "nvidia_ease": 100,
+        "hybrid_graphics": 95,
+        "advanced_display": 90,
+        "peripheral_ease": 85,
+        "gaming": 95,
+        "workstation": 92
+      },
+      "strengths": [
+        "Boa experiência com Nvidia",
+        "Fluxo moderno",
+        "Mosaico integrado"
+      ],
+      "tradeoffs": [
+        "COSMIC ainda é um ecossistema jovem",
+        "Fluxo menos familiar para alguns usuários"
+      ]
+    },
+    {
+      "id": "biglinux-kde",
+      "name": "BigLinux",
+      "distribution": "BigLinux",
+      "desktop": "KDE Plasma",
+      "family": "arch_manjaro",
+      "release_model": "rolling_curated",
+      "complexity_level": 1,
+      "official_url": "https://www.biglinux.com.br/download/",
+      "profile": {
+        "stability": 72,
+        "freshness": 82,
+        "low_maintenance": 80,
+        "technical_autonomy": 45,
+        "system_control": 65,
+        "ready_to_use": 98,
+        "graphical_tools": 98,
+        "learning_interest": 50,
+        "community_support": 68,
+        "proprietary_tolerance": 92,
+        "traditional_desktop": 96,
+        "workflow_novelty": 40,
+        "desktop_customization": 100,
+        "visual_polish": 96,
+        "resource_efficiency": 62,
+        "keyboard_workflow": 62,
+        "window_automation": 55
+      },
+      "hardware": {
+        "low_resources": 58,
+        "recent_hardware": 92,
+        "nvidia_ease": 88,
+        "hybrid_graphics": 82,
+        "advanced_display": 95,
+        "peripheral_ease": 90,
+        "gaming": 92,
+        "workstation": 85
+      },
+      "strengths": [
+        "Ferramentas próprias",
+        "Português em primeiro plano",
+        "Ecossistema Arch com corrimão"
+      ],
+      "tradeoffs": [
+        "Base rolling exige atualizações regulares",
+        "Comunidade internacional menor"
+      ]
+    },
+    {
+      "id": "cachyos-kde",
+      "name": "CachyOS com KDE Plasma",
+      "distribution": "CachyOS",
+      "desktop": "KDE Plasma",
+      "family": "arch",
+      "release_model": "rolling",
+      "complexity_level": 3,
+      "official_url": "https://cachyos.org/download/",
+      "profile": {
+        "stability": 65,
+        "freshness": 100,
+        "low_maintenance": 55,
+        "technical_autonomy": 72,
+        "system_control": 82,
+        "ready_to_use": 82,
+        "graphical_tools": 82,
+        "learning_interest": 75,
+        "community_support": 68,
+        "proprietary_tolerance": 92,
+        "traditional_desktop": 94,
+        "workflow_novelty": 45,
+        "desktop_customization": 100,
+        "visual_polish": 94,
+        "resource_efficiency": 68,
+        "keyboard_workflow": 72,
+        "window_automation": 62
+      },
+      "hardware": {
+        "low_resources": 55,
+        "recent_hardware": 100,
+        "nvidia_ease": 90,
+        "hybrid_graphics": 85,
+        "advanced_display": 98,
+        "peripheral_ease": 82,
+        "gaming": 100,
+        "workstation": 95
+      },
+      "strengths": [
+        "Desempenho e jogos",
+        "Hardware recente",
+        "KDE Plasma e pacotes muito atuais"
+      ],
+      "tradeoffs": [
+        "Rolling release",
+        "Exige autonomia para manutenção e solução de problemas"
+      ]
+    },
+    {
+      "id": "endeavouros-kde",
+      "name": "EndeavourOS com KDE Plasma",
+      "distribution": "EndeavourOS",
+      "desktop": "KDE Plasma",
+      "family": "arch",
+      "release_model": "rolling",
+      "complexity_level": 3,
+      "official_url": "https://endeavouros.com/",
+      "profile": {
+        "stability": 62,
+        "freshness": 98,
+        "low_maintenance": 45,
+        "technical_autonomy": 85,
+        "system_control": 92,
+        "ready_to_use": 60,
+        "graphical_tools": 58,
+        "learning_interest": 92,
+        "community_support": 82,
+        "proprietary_tolerance": 92,
+        "traditional_desktop": 94,
+        "workflow_novelty": 40,
+        "desktop_customization": 100,
+        "visual_polish": 82,
+        "resource_efficiency": 68,
+        "keyboard_workflow": 72,
+        "window_automation": 56
+      },
+      "hardware": {
+        "low_resources": 60,
+        "recent_hardware": 100,
+        "nvidia_ease": 75,
+        "hybrid_graphics": 75,
+        "advanced_display": 95,
+        "peripheral_ease": 72,
+        "gaming": 90,
+        "workstation": 92
+      },
+      "strengths": [
+        "Próximo do Arch",
+        "Instalação simplificada",
+        "Excelente para aprender"
+      ],
+      "tradeoffs": [
+        "Poucas decisões prontas",
+        "Manutenção continua sendo responsabilidade do usuário"
+      ]
+    }
+  ]
+}

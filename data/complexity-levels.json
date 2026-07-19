@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "readiness": {
+    "formula": "0.50 * technical_autonomy + 0.30 * learning_interest + 0.20 * (100 - low_maintenance)",
+    "range": [
+      0,
+      100
+    ],
+    "description": "Mede a disposição do usuário para lidar com instalação, manutenção e resolução de problemas."
+  },
+  "levels": [
+    {
+      "id": 1,
+      "slug": "assistido",
+      "label": "Assistido",
+      "description": "Instalação guiada, decisões prontas, ferramentas gráficas e pouca manutenção esperada.",
+      "primary_min_readiness": 0,
+      "alternative_min_readiness": 0,
+      "future_route_min_readiness": 0,
+      "below_primary_penalty_per_point": 0.0
+    },
+    {
+      "id": 2,
+      "slug": "guiado",
+      "label": "Intermediário guiado",
+      "description": "Pode exigir alguma leitura, ajustes ocasionais e compreensão básica do ecossistema Linux.",
+      "primary_min_readiness": 38,
+      "alternative_min_readiness": 22,
+      "future_route_min_readiness": 0,
+      "below_primary_penalty_per_point": 0.45
+    },
+    {
+      "id": 3,
+      "slug": "autonomo",
+      "label": "Autonomia alta",
+      "description": "Pressupõe acompanhamento de atualizações, leitura de documentação e capacidade de resolver problemas.",
+      "primary_min_readiness": 65,
+      "alternative_min_readiness": 50,
+      "future_route_min_readiness": 35,
+      "below_primary_penalty_per_point": 0.7
+    }
+  ],
+  "result_rules": {
+    "primary": "A maior compatibilidade entre opções cujo readiness alcance primary_min_readiness.",
+    "alternatives": "Até quatro opções próximas, desde que alcancem alternative_min_readiness.",
+    "future_route": "Opções mais exigentes que alcancem future_route_min_readiness, mas não o limite de alternativa.",
+    "hidden": "Opções abaixo de future_route_min_readiness não são mostradas.",
+    "diversity_rule": "Evitar resultados quase idênticos; priorizar uma rota equilibrada, uma conservadora, uma atual e uma simples quando disponíveis."
+  }
+}
